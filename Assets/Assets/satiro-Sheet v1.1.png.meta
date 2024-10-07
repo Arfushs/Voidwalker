@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 3f678c4ee616e4e4b939aba94b1f5eec
+guid: 8f52ffb36f6d9294eb02b753aed2bf1e
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -110,49 +110,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: AnimationSheet_Character_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 256
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: edfa7eca43d77454096768cd318a8f87
-      internalID: -1819075711
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: AnimationSheet_Character_1
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 256
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 26f21c44294848d46bb1c7d66b6b9d46
-      internalID: -880622768
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: AnimationSheet_Character_2
+      name: satiro-Sheet v1.1_0
       rect:
         serializedVersion: 2
         x: 0
@@ -166,14 +124,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 657ff9a1da3548544b436ba58cb99cc8
-      internalID: 853906255
+      spriteID: 82e53bd2e547669459616b978f025d8b
+      internalID: 155689271
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AnimationSheet_Character_3
+      name: satiro-Sheet v1.1_1
       rect:
         serializedVersion: 2
         x: 32
@@ -187,14 +145,98 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1507c2788ae0ff048a78229b2cc7d167
-      internalID: 1397559175
+      spriteID: 0cf233ecec6e5e241aa64b035397da28
+      internalID: 1329128862
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AnimationSheet_Character_4
+      name: satiro-Sheet v1.1_2
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 224
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4a6cd6753eb6444d8e7ff067a48c4ec
+      internalID: 1194396255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: satiro-Sheet v1.1_3
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 224
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 609170fe9aaa208468e90019d4e13df6
+      internalID: 1285203796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: satiro-Sheet v1.1_4
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 224
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c89b1fc0734c4634082022a0d57915cf
+      internalID: 794022334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: satiro-Sheet v1.1_5
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 224
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf3911de9018bc24caea5037848fa313
+      internalID: -2120102494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: satiro-Sheet v1.1_6
       rect:
         serializedVersion: 2
         x: 0
@@ -208,14 +250,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 011ef97f6db8a654f8074fb16d2820d1
-      internalID: -200332133
+      spriteID: efdc2637fc3d4e94784d1001bcec3db2
+      internalID: 2050899233
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AnimationSheet_Character_5
+      name: satiro-Sheet v1.1_7
       rect:
         serializedVersion: 2
         x: 32
@@ -229,14 +271,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a8be239ffd56305409e7f3526134b30c
-      internalID: 1070818435
+      spriteID: 36c8f9fdc5404ae4492428c352e957c7
+      internalID: -156048086
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AnimationSheet_Character_6
+      name: satiro-Sheet v1.1_8
       rect:
         serializedVersion: 2
         x: 64
@@ -250,14 +292,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7e031ef500f9e6246b7e6a4028795101
-      internalID: 1654347063
+      spriteID: 4b97b43fba6ab894aa4d2901879ba912
+      internalID: -1449240403
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AnimationSheet_Character_7
+      name: satiro-Sheet v1.1_9
       rect:
         serializedVersion: 2
         x: 96
@@ -271,102 +313,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 82b487425f70cfb45a9dfeddc7e71a8e
-      internalID: 57361328
+      spriteID: 1d25cf5766511bb468c41c2a31665734
+      internalID: -1448856714
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AnimationSheet_Character_8
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 160
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 609eaa956897b114c99012ca5c05a593
-      internalID: -1946140703
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: AnimationSheet_Character_9
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 160
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 130350a64f78ab9468661628d970f6c2
-      internalID: -307518774
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: AnimationSheet_Character_10
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 160
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ffda75504bfeb3349902aa7222d6c1fa
-      internalID: 1520736056
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: AnimationSheet_Character_11
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 160
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a394386730ee2fa47ab2a797e8b452f0
-      internalID: -612842020
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: AnimationSheet_Character_12
+      name: satiro-Sheet v1.1_10
       rect:
         serializedVersion: 2
         x: 128
-        y: 160
+        y: 192
         width: 32
         height: 32
       alignment: 0
@@ -376,18 +334,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3b17e050e01cab04d8194c8d192894ff
-      internalID: -1322048071
+      spriteID: 4c10a627ac273c44abd8a450d445acd1
+      internalID: -386644831
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AnimationSheet_Character_13
+      name: satiro-Sheet v1.1_11
       rect:
         serializedVersion: 2
         x: 160
-        y: 160
+        y: 192
         width: 32
         height: 32
       alignment: 0
@@ -397,18 +355,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f86cc82f7fd88fc4abe7caa0c7a9016a
-      internalID: 1636939002
+      spriteID: 4b8a5aad56515bb47ba71b1e66ba9f06
+      internalID: 2025947732
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AnimationSheet_Character_14
+      name: satiro-Sheet v1.1_12
       rect:
         serializedVersion: 2
         x: 192
-        y: 160
+        y: 192
         width: 32
         height: 32
       alignment: 0
@@ -418,17 +376,38 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6bac682346f31ee48904df450a0cdaaa
-      internalID: 1489303842
+      spriteID: 825267d289d771248a72c69c552c9dff
+      internalID: -1704844083
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AnimationSheet_Character_15
+      name: satiro-Sheet v1.1_13
       rect:
         serializedVersion: 2
         x: 224
+        y: 192
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a05a173fe88f70643a8eabc08d80ca58
+      internalID: 628343659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: satiro-Sheet v1.1_14
+      rect:
+        serializedVersion: 2
+        x: 0
         y: 160
         width: 32
         height: 32
@@ -439,14 +418,77 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 81b7c1e37e5686743b3f545b941a4b90
-      internalID: 27329705
+      spriteID: 345b8af1626465e4eab17ee7f72d8f7a
+      internalID: 577147000
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AnimationSheet_Character_16
+      name: satiro-Sheet v1.1_15
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e88d8e1b1e55554f97addceeb2567df
+      internalID: -1482547468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: satiro-Sheet v1.1_16
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff5a8c9387191c24ca7d80731094fa01
+      internalID: 1362189510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: satiro-Sheet v1.1_17
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0a51f1aa7e8891498a51fe7fb40a02a
+      internalID: 865496260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: satiro-Sheet v1.1_18
       rect:
         serializedVersion: 2
         x: 0
@@ -460,14 +502,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 94ae22ce12cae32449fe613e12d0d3cb
-      internalID: 624145777
+      spriteID: 8e18f00fa5159e541988c6a0a3b29a1b
+      internalID: -1792114939
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AnimationSheet_Character_17
+      name: satiro-Sheet v1.1_19
       rect:
         serializedVersion: 2
         x: 32
@@ -481,14 +523,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 98b81b272b465a64da6ef2806c720574
-      internalID: -89092232
+      spriteID: 6856f1d5bb17ba145a964ab04d80573e
+      internalID: -1104019696
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AnimationSheet_Character_18
+      name: satiro-Sheet v1.1_20
       rect:
         serializedVersion: 2
         x: 64
@@ -502,14 +544,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fa74cca9e0c479a40bf1649e3deb91a9
-      internalID: 1875572790
+      spriteID: 126726af5060715439d5e3e6c4402ea3
+      internalID: -1858031597
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AnimationSheet_Character_19
+      name: satiro-Sheet v1.1_21
       rect:
         serializedVersion: 2
         x: 96
@@ -523,14 +565,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9be3b9b33d8bc6c429c5791b7adf68ab
-      internalID: 2041239195
+      spriteID: 3eaf00b4e0d4245418861fee4cb68785
+      internalID: 966291488
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AnimationSheet_Character_20
+      name: satiro-Sheet v1.1_22
       rect:
         serializedVersion: 2
         x: 128
@@ -544,14 +586,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 29e2583ece5e0b049a114f6297e6c06d
-      internalID: -1701213502
+      spriteID: afbdfc1ea4a6c4d41b7221f725d55c57
+      internalID: -1206394937
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AnimationSheet_Character_21
+      name: satiro-Sheet v1.1_23
       rect:
         serializedVersion: 2
         x: 160
@@ -565,14 +607,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ed57279cc6527fb4db2a48a327f35a6b
-      internalID: -1401571615
+      spriteID: 1eef91fb70139c648acc5e9ed5f3ebd9
+      internalID: -306994017
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AnimationSheet_Character_22
+      name: satiro-Sheet v1.1_24
       rect:
         serializedVersion: 2
         x: 0
@@ -586,14 +628,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 720fe7bf7f7e9a345b457a50a7ddfc9c
-      internalID: -1735798929
+      spriteID: 6b7dc814aca2374448c9303cb615dd5c
+      internalID: 278493451
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AnimationSheet_Character_23
+      name: satiro-Sheet v1.1_25
       rect:
         serializedVersion: 2
         x: 32
@@ -607,14 +649,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8046dede10a37994cb093d84e65553f6
-      internalID: 2116215739
+      spriteID: 3d63ce34cf6aac94a8571ae4c3fa3fd6
+      internalID: -1821122499
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AnimationSheet_Character_24
+      name: satiro-Sheet v1.1_26
       rect:
         serializedVersion: 2
         x: 64
@@ -628,14 +670,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 09374964378d82c498137dbd60903d12
-      internalID: 178852208
+      spriteID: 1678ef9fc8e20184590fe6dba9278c65
+      internalID: -1527054462
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AnimationSheet_Character_25
+      name: satiro-Sheet v1.1_27
       rect:
         serializedVersion: 2
         x: 96
@@ -649,14 +691,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5a00ac7463a30ab4f94020732351fb12
-      internalID: 833595734
+      spriteID: a54baa4d4c54c4a41a5cbc88bdebbf4a
+      internalID: -153322584
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AnimationSheet_Character_26
+      name: satiro-Sheet v1.1_28
       rect:
         serializedVersion: 2
         x: 128
@@ -670,14 +712,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 43c203067b29ada4bbe6e05a046a6e35
-      internalID: 1315406620
+      spriteID: 4d105e38aebf13c408c66861d5da31c2
+      internalID: 89236867
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AnimationSheet_Character_27
+      name: satiro-Sheet v1.1_29
       rect:
         serializedVersion: 2
         x: 160
@@ -691,56 +733,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2b0f263cc064ea143949f4371a39f26b
-      internalID: 1981788696
+      spriteID: 2cfd6bbe79019ca49aee4eeedc54a74a
+      internalID: 1017497613
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AnimationSheet_Character_28
-      rect:
-        serializedVersion: 2
-        x: 192
-        y: 96
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5996eb0b25365184ab93339e6b6aa44c
-      internalID: 276599183
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: AnimationSheet_Character_29
-      rect:
-        serializedVersion: 2
-        x: 224
-        y: 96
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4c3a19895c0a529488a4558a0cc5229a
-      internalID: 227270833
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: AnimationSheet_Character_30
+      name: satiro-Sheet v1.1_30
       rect:
         serializedVersion: 2
         x: 0
@@ -754,14 +754,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4ce5c44340a1d5b41a901a88f9eb3dbd
-      internalID: 964876354
+      spriteID: 28687f43d8099fb48a9bfc7facccca07
+      internalID: -791555219
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AnimationSheet_Character_31
+      name: satiro-Sheet v1.1_31
       rect:
         serializedVersion: 2
         x: 32
@@ -775,14 +775,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5397cc9f931573446813f2fc35a63718
-      internalID: -19355067
+      spriteID: b2e43b42c6375a1469794cfbe7ce7d3e
+      internalID: -1993229373
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AnimationSheet_Character_32
+      name: satiro-Sheet v1.1_32
       rect:
         serializedVersion: 2
         x: 64
@@ -796,14 +796,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 83215c23562079b48baae74bbca7e805
-      internalID: 720908390
+      spriteID: e7f2413e0294be146913a4ddde1213f8
+      internalID: 1723755221
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AnimationSheet_Character_33
+      name: satiro-Sheet v1.1_33
       rect:
         serializedVersion: 2
         x: 96
@@ -817,14 +817,140 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 061095a3514a1b24c8d4f8513907f431
-      internalID: 475991626
+      spriteID: 3872a520d4aad024c8b8aa02b12e932b
+      internalID: 562545165
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AnimationSheet_Character_34
+      name: satiro-Sheet v1.1_34
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57f9a8eff0abade4d82bdd92c86bf126
+      internalID: 1128016355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: satiro-Sheet v1.1_35
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0db753a0deef27546a70d94c31f845be
+      internalID: -1141812000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: satiro-Sheet v1.1_36
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d74b011a2807c714bb05ddfdaeecb05c
+      internalID: 764721854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: satiro-Sheet v1.1_37
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 848792f61e3fd6c4ca517ba014908851
+      internalID: 794895364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: satiro-Sheet v1.1_38
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78966fa5156daba49806091d11d68977
+      internalID: 1792903454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: satiro-Sheet v1.1_39
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cabb396a8332b454d960915d58e6b2f4
+      internalID: 1663592720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: satiro-Sheet v1.1_40
       rect:
         serializedVersion: 2
         x: 0
@@ -838,14 +964,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 37d09314b705e28478cabb4a43265158
-      internalID: -444696885
+      spriteID: 51db8cfd4f0f180469ef152a263b4433
+      internalID: 1490291497
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AnimationSheet_Character_35
+      name: satiro-Sheet v1.1_41
       rect:
         serializedVersion: 2
         x: 32
@@ -859,14 +985,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cd6841ae5df57324698d0e0728ed9f51
-      internalID: 71036181
+      spriteID: e791f4b9b389efc478c67ee9146e7c54
+      internalID: 205661415
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AnimationSheet_Character_36
+      name: satiro-Sheet v1.1_42
       rect:
         serializedVersion: 2
         x: 64
@@ -880,14 +1006,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 86463cf5c5e53e140a76fa1e90d76328
-      internalID: -790745507
+      spriteID: ca2cb482710e3264ca53ba97ccb0eff6
+      internalID: 187971819
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AnimationSheet_Character_37
+      name: satiro-Sheet v1.1_43
       rect:
         serializedVersion: 2
         x: 96
@@ -901,98 +1027,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4ad5374d1b114da4497982b7e4d31fe0
-      internalID: -1897587713
+      spriteID: 4761ee03cd2aba846a9c5a1640fe0aff
+      internalID: 882325602
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AnimationSheet_Character_38
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 32
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 045be8fb8fb32c74e8632092b36e3dc7
-      internalID: 247590885
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: AnimationSheet_Character_39
-      rect:
-        serializedVersion: 2
-        x: 160
-        y: 32
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a568dce34e630d644ad1118092f84e0d
-      internalID: 1634005179
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: AnimationSheet_Character_40
-      rect:
-        serializedVersion: 2
-        x: 192
-        y: 32
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: bea892fa42d4d244ca85b230bb5602ac
-      internalID: -867630404
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: AnimationSheet_Character_41
-      rect:
-        serializedVersion: 2
-        x: 224
-        y: 32
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 78d797d58272add44b78b130e971d943
-      internalID: -312173671
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: AnimationSheet_Character_42
+      name: satiro-Sheet v1.1_44
       rect:
         serializedVersion: 2
         x: 0
@@ -1006,14 +1048,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9e0f9542650b1414e8f90046ec8b3601
-      internalID: 2009871707
+      spriteID: 8b36accf7385b9c4e8d0f686e623bc23
+      internalID: -1470869721
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AnimationSheet_Character_43
+      name: satiro-Sheet v1.1_45
       rect:
         serializedVersion: 2
         x: 32
@@ -1027,14 +1069,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2636b375e1d2cb348bce035572a199b3
-      internalID: 1424740891
+      spriteID: 932fb9d79e6698041b51b3e95c601a4f
+      internalID: 1913193100
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AnimationSheet_Character_44
+      name: satiro-Sheet v1.1_46
       rect:
         serializedVersion: 2
         x: 64
@@ -1048,14 +1090,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: eb70b9a37b0c3004487790cbe47fd82b
-      internalID: 801232843
+      spriteID: 8aebee7f344867e41ac2f9413c7a9b8a
+      internalID: 137728341
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AnimationSheet_Character_45
+      name: satiro-Sheet v1.1_47
       rect:
         serializedVersion: 2
         x: 96
@@ -1069,14 +1111,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 726e9cd021e32c346b07cdca2d6cccfb
-      internalID: -1509265067
+      spriteID: 8e9009cfd6631564980e81b63fb176d9
+      internalID: 1372108219
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AnimationSheet_Character_46
+      name: satiro-Sheet v1.1_48
       rect:
         serializedVersion: 2
         x: 128
@@ -1090,14 +1132,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f248abbccf2822046867b6504f8dcb98
-      internalID: -1502830619
+      spriteID: e6dfd6a0d06bf4f4f9f15c05c1eb2e4b
+      internalID: -298815012
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AnimationSheet_Character_47
+      name: satiro-Sheet v1.1_49
       rect:
         serializedVersion: 2
         x: 160
@@ -1111,50 +1153,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 683dfbb1d946ca94ab62bd6a0a277991
-      internalID: 1896985225
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: AnimationSheet_Character_48
-      rect:
-        serializedVersion: 2
-        x: 192
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3f5cbfa714214c84daebb9e26a96afdb
-      internalID: 1582353841
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: AnimationSheet_Character_49
-      rect:
-        serializedVersion: 2
-        x: 224
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e3465c0ee2add904aa72315fdd0f4fc6
-      internalID: -1311548153
+      spriteID: 6aa19186c6f53a44cb0ae279363f2cd6
+      internalID: 1475430157
       vertices: []
       indices: 
       edges: []
@@ -1170,56 +1170,56 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      AnimationSheet_Character_0: -1819075711
-      AnimationSheet_Character_1: -880622768
-      AnimationSheet_Character_10: 1520736056
-      AnimationSheet_Character_11: -612842020
-      AnimationSheet_Character_12: -1322048071
-      AnimationSheet_Character_13: 1636939002
-      AnimationSheet_Character_14: 1489303842
-      AnimationSheet_Character_15: 27329705
-      AnimationSheet_Character_16: 624145777
-      AnimationSheet_Character_17: -89092232
-      AnimationSheet_Character_18: 1875572790
-      AnimationSheet_Character_19: 2041239195
-      AnimationSheet_Character_2: 853906255
-      AnimationSheet_Character_20: -1701213502
-      AnimationSheet_Character_21: -1401571615
-      AnimationSheet_Character_22: -1735798929
-      AnimationSheet_Character_23: 2116215739
-      AnimationSheet_Character_24: 178852208
-      AnimationSheet_Character_25: 833595734
-      AnimationSheet_Character_26: 1315406620
-      AnimationSheet_Character_27: 1981788696
-      AnimationSheet_Character_28: 276599183
-      AnimationSheet_Character_29: 227270833
-      AnimationSheet_Character_3: 1397559175
-      AnimationSheet_Character_30: 964876354
-      AnimationSheet_Character_31: -19355067
-      AnimationSheet_Character_32: 720908390
-      AnimationSheet_Character_33: 475991626
-      AnimationSheet_Character_34: -444696885
-      AnimationSheet_Character_35: 71036181
-      AnimationSheet_Character_36: -790745507
-      AnimationSheet_Character_37: -1897587713
-      AnimationSheet_Character_38: 247590885
-      AnimationSheet_Character_39: 1634005179
-      AnimationSheet_Character_4: -200332133
-      AnimationSheet_Character_40: -867630404
-      AnimationSheet_Character_41: -312173671
-      AnimationSheet_Character_42: 2009871707
-      AnimationSheet_Character_43: 1424740891
-      AnimationSheet_Character_44: 801232843
-      AnimationSheet_Character_45: -1509265067
-      AnimationSheet_Character_46: -1502830619
-      AnimationSheet_Character_47: 1896985225
-      AnimationSheet_Character_48: 1582353841
-      AnimationSheet_Character_49: -1311548153
-      AnimationSheet_Character_5: 1070818435
-      AnimationSheet_Character_6: 1654347063
-      AnimationSheet_Character_7: 57361328
-      AnimationSheet_Character_8: -1946140703
-      AnimationSheet_Character_9: -307518774
+      satiro-Sheet v1.1_0: 155689271
+      satiro-Sheet v1.1_1: 1329128862
+      satiro-Sheet v1.1_10: -386644831
+      satiro-Sheet v1.1_11: 2025947732
+      satiro-Sheet v1.1_12: -1704844083
+      satiro-Sheet v1.1_13: 628343659
+      satiro-Sheet v1.1_14: 577147000
+      satiro-Sheet v1.1_15: -1482547468
+      satiro-Sheet v1.1_16: 1362189510
+      satiro-Sheet v1.1_17: 865496260
+      satiro-Sheet v1.1_18: -1792114939
+      satiro-Sheet v1.1_19: -1104019696
+      satiro-Sheet v1.1_2: 1194396255
+      satiro-Sheet v1.1_20: -1858031597
+      satiro-Sheet v1.1_21: 966291488
+      satiro-Sheet v1.1_22: -1206394937
+      satiro-Sheet v1.1_23: -306994017
+      satiro-Sheet v1.1_24: 278493451
+      satiro-Sheet v1.1_25: -1821122499
+      satiro-Sheet v1.1_26: -1527054462
+      satiro-Sheet v1.1_27: -153322584
+      satiro-Sheet v1.1_28: 89236867
+      satiro-Sheet v1.1_29: 1017497613
+      satiro-Sheet v1.1_3: 1285203796
+      satiro-Sheet v1.1_30: -791555219
+      satiro-Sheet v1.1_31: -1993229373
+      satiro-Sheet v1.1_32: 1723755221
+      satiro-Sheet v1.1_33: 562545165
+      satiro-Sheet v1.1_34: 1128016355
+      satiro-Sheet v1.1_35: -1141812000
+      satiro-Sheet v1.1_36: 764721854
+      satiro-Sheet v1.1_37: 794895364
+      satiro-Sheet v1.1_38: 1792903454
+      satiro-Sheet v1.1_39: 1663592720
+      satiro-Sheet v1.1_4: 794022334
+      satiro-Sheet v1.1_40: 1490291497
+      satiro-Sheet v1.1_41: 205661415
+      satiro-Sheet v1.1_42: 187971819
+      satiro-Sheet v1.1_43: 882325602
+      satiro-Sheet v1.1_44: -1470869721
+      satiro-Sheet v1.1_45: 1913193100
+      satiro-Sheet v1.1_46: 137728341
+      satiro-Sheet v1.1_47: 1372108219
+      satiro-Sheet v1.1_48: -298815012
+      satiro-Sheet v1.1_49: 1475430157
+      satiro-Sheet v1.1_5: -2120102494
+      satiro-Sheet v1.1_6: 2050899233
+      satiro-Sheet v1.1_7: -156048086
+      satiro-Sheet v1.1_8: -1449240403
+      satiro-Sheet v1.1_9: -1448856714
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
