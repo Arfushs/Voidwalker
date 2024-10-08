@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -41,6 +42,8 @@ public class PlayerMove : MonoBehaviour
 
     private InputActions _inputActions;
 
+    private float _localScale;
+
     private void Awake()
     {
         _rb = GetComponent<Rigidbody2D>();
@@ -49,6 +52,7 @@ public class PlayerMove : MonoBehaviour
         _inputActions.Player.Enable();
         _inputActions.Player.Movement.performed += OnMove;
         _inputActions.Player.Movement.canceled += OnMove;
+        _localScale = transform.localScale.x;
     }
 
     private void OnDisable()
@@ -62,6 +66,14 @@ public class PlayerMove : MonoBehaviour
     public void OnMove(InputAction.CallbackContext context)
     {
         _directionX = context.ReadValue<float>(); // Get the movement input (-1, 0, 1)
+    }
+
+    private void Update()
+    {
+        if (_directionX != 0)
+        {
+            transform.localScale = new Vector3(_directionX > 0 ? _localScale : -_localScale, _localScale, _localScale); 
+        }
     }
 
     private void FixedUpdate()
