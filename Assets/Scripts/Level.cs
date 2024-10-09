@@ -9,6 +9,7 @@ public class Level : MonoBehaviour
 {
     [SerializeField] private Transform defaultPlatformsContainer;
     [SerializeField] private Transform alterPlatformContainer;
+    [SerializeField] private DimensionalBackground defaultBg, alterBg;
     public Transform PlayerSpawnPoint { get; private set; }
     public DimensionType InitialDimension { get; private set; }
     
@@ -16,16 +17,20 @@ public class Level : MonoBehaviour
 
     private void Awake()
     {
-        PlayerDimensionChanger.OnDimensionChanged += ChangeDimension;
+        PlayerDimensionChanger.OnDimensionChanged += OnDimensionChanged;
     }
 
-    private void ChangeDimension()
+    private void OnDimensionChanged()
     {
         DimensionType targetDimension = _player.CurrentDimension == DimensionType.Default ?
             DimensionType.Alter : DimensionType.Default;
         
         _player.SetDimension(targetDimension);
-        
+        ChangeDimension(targetDimension);
+    }
+
+    private void ChangeDimension(DimensionType targetDimension)
+    {
         List<IDimensional> allPlatforms = new List<IDimensional>();
         allPlatforms.AddRange(defaultPlatformsContainer.GetComponentsInChildren<IDimensional>());
         allPlatforms.AddRange(alterPlatformContainer.GetComponentsInChildren<IDimensional>());
@@ -45,6 +50,6 @@ public class Level : MonoBehaviour
 
     private void OnDestroy()
     {
-        PlayerDimensionChanger.OnDimensionChanged -= ChangeDimension;
+        PlayerDimensionChanger.OnDimensionChanged -= OnDimensionChanged;
     }
 }

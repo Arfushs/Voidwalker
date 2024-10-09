@@ -7,7 +7,11 @@ using UnityEngine.InputSystem;
 
 public class PlayerDimensionChanger : MonoBehaviour
 {
+    [SerializeField] private Transform _spriteMask;
+    [SerializeField] private float _dimensionChangeDuration = .5f;
+    
     private InputActions _inputActions;
+    private bool _canChangeDimension = true;
     public static event Action OnDimensionChanged;
     private void Awake()
     {
@@ -24,7 +28,20 @@ public class PlayerDimensionChanger : MonoBehaviour
 
     private void ChangeDimension(InputAction.CallbackContext context)
     {
-        Debug.Log("Change dimension");
-        OnDimensionChanged?.Invoke();
+        if (_canChangeDimension)
+        {
+            Debug.Log("Change dimension");
+            _canChangeDimension = false;
+            OnDimensionChanged?.Invoke();
+            Invoke("ResetDimensionCounter", _dimensionChangeDuration);
+        }
+        
     }
+
+    private void ResetDimensionCounter()
+    {
+        _canChangeDimension = true;
+    }
+
+    
 }
