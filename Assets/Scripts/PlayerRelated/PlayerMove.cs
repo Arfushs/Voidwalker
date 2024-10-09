@@ -30,7 +30,7 @@ public class PlayerMove : MonoBehaviour
     private float _friction = 0.2f;
 
     [Header("Options")]
-    [SerializeField] private bool _useAcceleration = true;
+    [SerializeField] private bool _useAcceleration = true; // If true, use acceleration/deceleration, if false, use instant speed.
 
     private float _directionX; // Input direction (-1 for left, 1 for right, 0 for no input)
     private Vector2 _velocity;
@@ -98,14 +98,23 @@ public class PlayerMove : MonoBehaviour
         
         _maxSpeedChange = (Mathf.Abs(targetSpeed) > 0.01f) ? acceleration : deceleration;
 
-        // Apply friction when grounded and not moving
-        if (isGrounded && Mathf.Abs(_directionX) < 0.01f)
+        if (_useAcceleration)
         {
-            _maxSpeedChange *= (1 - _friction);
+            // Apply friction when grounded and not moving
+            if (isGrounded && Mathf.Abs(_directionX) < 0.01f)
+            {
+                _maxSpeedChange *= (1 - _friction);
+            }
+
+            // Smooth movement with acceleration/deceleration
+            _velocity.x = Mathf.MoveTowards(_rb.velocity.x, targetSpeed, _maxSpeedChange * Time.fixedDeltaTime);
+        }
+        else
+        {
+            // Instant movement without acceleration (directly set the target speed)
+            _velocity.x = targetSpeed;
         }
 
-        // Smooth movement
-        _velocity.x = Mathf.MoveTowards(_rb.velocity.x, targetSpeed, _maxSpeedChange * Time.fixedDeltaTime);
         _rb.velocity = new Vector2(_velocity.x, _rb.velocity.y);
     }
 }

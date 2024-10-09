@@ -1,18 +1,50 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using Enums;
+using Interfaces;
 using UnityEngine;
 
 public class Level : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] private Transform defaultPlatformsContainer;
+    [SerializeField] private Transform alterPlatformContainer;
+    public Transform PlayerSpawnPoint { get; private set; }
+    public DimensionType InitialDimension { get; private set; }
+    
+    private Player _player;
+
+    private void Awake()
     {
-        
+        PlayerDimensionChanger.OnDimensionChanged += ChangeDimension;
     }
 
-    // Update is called once per frame
-    void Update()
+    private void ChangeDimension()
     {
+        DimensionType targetDimension = _player.CurrentDimension == DimensionType.Default ?
+            DimensionType.Alter : DimensionType.Default;
         
+        _player.SetDimension(targetDimension);
+        
+        List<IDimensional> allPlatforms = new List<IDimensional>();
+        allPlatforms.AddRange(defaultPlatformsContainer.GetComponentsInChildren<IDimensional>());
+        allPlatforms.AddRange(alterPlatformContainer.GetComponentsInChildren<IDimensional>());
+        
+        foreach (IDimensional platform in allPlatforms)
+        {
+            if (platform.DimensionType == targetDimension)
+            {
+                platform.Show();
+            }
+            else
+            {
+                platform.Hide();
+            }
+        }
+    }
+
+    private void OnDestroy()
+    {
+        PlayerDimensionChanger.OnDimensionChanged -= ChangeDimension;
     }
 }
