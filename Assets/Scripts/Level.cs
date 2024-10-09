@@ -11,13 +11,30 @@ public class Level : MonoBehaviour
     [SerializeField] private Transform alterPlatformContainer;
     [SerializeField] private DimensionalBackground defaultBg, alterBg;
     public Transform PlayerSpawnPoint { get; private set; }
-    public DimensionType InitialDimension { get; private set; }
+    [field:SerializeField] public DimensionType InitialDimension { get; private set; }
     
-    private Player _player;
+    [SerializeField] private Player _player;
 
     private void Awake()
     {
         PlayerDimensionChanger.OnDimensionChanged += OnDimensionChanged;
+        PlayerDimensionChanger.OnMaskTransitionComplete += HandleBackgrounds;
+        //ChangeDimension(InitialDimension);
+    }
+
+    private void HandleBackgrounds()
+    {
+        if (defaultBg.DimensionType == _player.CurrentDimension)
+        {
+            
+            defaultBg.ChangeMaskInteractionToOutside();
+            alterBg.ChangeMaskInteractionToInside();
+        }
+        else
+        {
+            alterBg.ChangeMaskInteractionToOutside();
+            defaultBg.ChangeMaskInteractionToInside();
+        }
     }
 
     private void OnDimensionChanged()
@@ -26,7 +43,7 @@ public class Level : MonoBehaviour
             DimensionType.Alter : DimensionType.Default;
         
         _player.SetDimension(targetDimension);
-        ChangeDimension(targetDimension);
+        //ChangeDimension(targetDimension);
     }
 
     private void ChangeDimension(DimensionType targetDimension)
@@ -51,5 +68,6 @@ public class Level : MonoBehaviour
     private void OnDestroy()
     {
         PlayerDimensionChanger.OnDimensionChanged -= OnDimensionChanged;
+        PlayerDimensionChanger.OnMaskTransitionComplete -= HandleBackgrounds;
     }
 }

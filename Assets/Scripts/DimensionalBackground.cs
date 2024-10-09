@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class DimensionalBackground : MonoBehaviour
 {
-    [SerializeField] private DimensionType _dimensionType;
+    [field:SerializeField] public DimensionType DimensionType { get; private set; }
     private List<SpriteRenderer> _spriteRenderers = new List<SpriteRenderer>();
 
     private void Awake()
