@@ -17,7 +17,6 @@ public class Player : MonoBehaviour
 
     public void SetupPlayer(Level level)
     {
-        transform.position = level.PlayerSpawnPoint.position;
         CurrentDimension = level.InitialDimension;
     }
 

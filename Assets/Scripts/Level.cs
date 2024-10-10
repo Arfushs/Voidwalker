@@ -1,25 +1,42 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Cinemachine;
 using Enums;
 using Interfaces;
 using UnityEngine;
 
 public class Level : MonoBehaviour
 {
+    [Header("GameObjects")]
+    [Space]
+    [SerializeField] private Transform _playerSpawnPoint;
     [SerializeField] private Transform defaultPlatformsContainer;
     [SerializeField] private Transform alterPlatformContainer;
     [SerializeField] private DimensionalBackground defaultBg, alterBg;
-    public Transform PlayerSpawnPoint { get; private set; }
+    [SerializeField] private AutoConfiner _confiner;
+    [Header("Options")]
+    [Space]
+    [SerializeField] private int _levelIndex;
+    
     [field:SerializeField] public DimensionType InitialDimension { get; private set; }
     
-    [SerializeField] private Player _player;
+    private Player _player;
 
     private void Awake()
     {
         PlayerDimensionChanger.OnDimensionChanged += OnDimensionChanged;
         PlayerDimensionChanger.OnMaskTransitionComplete += HandleBackgrounds;
-        //ChangeDimension(InitialDimension);
+    }
+
+    public void Init(Player player, CinemachineConfiner2D cinemachineConfiner)
+    {
+        _player = player;
+        _player.SetupPlayer(this);
+        _confiner.Init(cinemachineConfiner);
+        _player.transform.position = _playerSpawnPoint.position;
+        ChangeDimension(InitialDimension);
+        HandleBackgrounds();
     }
 
     private void HandleBackgrounds()
@@ -43,7 +60,7 @@ public class Level : MonoBehaviour
             DimensionType.Alter : DimensionType.Default;
         
         _player.SetDimension(targetDimension);
-        //ChangeDimension(targetDimension);
+        ChangeDimension(targetDimension);
     }
 
     private void ChangeDimension(DimensionType targetDimension)
@@ -51,6 +68,9 @@ public class Level : MonoBehaviour
         List<IDimensional> allPlatforms = new List<IDimensional>();
         allPlatforms.AddRange(defaultPlatformsContainer.GetComponentsInChildren<IDimensional>());
         allPlatforms.AddRange(alterPlatformContainer.GetComponentsInChildren<IDimensional>());
+        
+        if(allPlatforms.Count == 0)
+            return;
         
         foreach (IDimensional platform in allPlatforms)
         {

@@ -7,7 +7,6 @@ public class AutoConfiner : MonoBehaviour
 {
     [SerializeField] private SpriteRenderer _spriteRenderer; // Tileable Sprite Renderer
     [SerializeField] private float _yOffset = -0.5f; // Y ekseninde offset
-    [SerializeField] private CinemachineVirtualCamera _virtualCamera; // Virtual Camera referansı
 
     private PolygonCollider2D _polygonCollider;
     private CinemachineConfiner2D _confiner;
@@ -15,25 +14,13 @@ public class AutoConfiner : MonoBehaviour
     void Awake()
     {
         _polygonCollider = GetComponent<PolygonCollider2D>();
-        _confiner = _virtualCamera.GetComponent<CinemachineConfiner2D>();
+    }
 
-        if (_spriteRenderer != null)
-        {
-            FitColliderToTiledSprite();
-        }
-        else
-        {
-            Debug.LogError("SpriteRenderer atanmadı.");
-        }
-
-        if (_confiner != null)
-        {
-            UpdateConfinerBounds();
-        }
-        else
-        {
-            Debug.LogError("Cinemachine Confiner bulunamadı.");
-        }
+    public void Init(CinemachineConfiner2D cinemachineConfiner)
+    {
+        FitColliderToTiledSprite();
+        _confiner = cinemachineConfiner;
+        UpdateConfinerBounds();
     }
 
     private void FitColliderToTiledSprite()
