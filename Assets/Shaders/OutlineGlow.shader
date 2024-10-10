@@ -54,19 +54,13 @@ Shader "Unlit/OutlineGlow"
 
             fixed4 frag (v2f i) : SV_Target
             {
-                // Orijinal texture'ı sample'la ama sadece alpha kanalını kullan
                 fixed4 col = tex2D(_MainTex, i.uv);
 
-                // 8 yönlü kenar tespiti
-                float2 directions[8] = {
-                    float2(1, 0), float2(0, 1), float2(-1, 0), float2(0, -1), 
-                    float2(DIV_SQRT_2, DIV_SQRT_2), float2(-DIV_SQRT_2, DIV_SQRT_2), 
-                    float2(-DIV_SQRT_2, -DIV_SQRT_2), float2(DIV_SQRT_2, -DIV_SQRT_2)
-                };
+                float2 directions[8] = {float2(1, 0), float2(0, 1), float2(-1, 0), float2(0, -1), 
+                    float2(DIV_SQRT_2, DIV_SQRT_2), float2(-DIV_SQRT_2, DIV_SQRT_2), float2(-DIV_SQRT_2, -DIV_SQRT_2), float2(DIV_SQRT_2, -DIV_SQRT_2)};
 
                 float2 sampleDistance = _MainTex_TexelSize.xy * _OutlineWidth;
 
-                // Maksimum alpha'yı hesapla (etrafındaki pikselleri sample alarak)
                 float maxAlpha = 0;
                 for (uint index = 0; index < 8; index++) 
                 {
@@ -74,9 +68,8 @@ Shader "Unlit/OutlineGlow"
                     maxAlpha = max(maxAlpha, tex2D(_MainTex, sampleUV).a);
                 }
 
-                // Texture'u transparan yap ve sadece outline'ı göster
-                col.rgb = _OutlineColor.rgb; // Sadece outline rengini kullan
-                col.a = maxAlpha; // Sadece kenarlardan gelen alpha ile göster
+                col.rgb = lerp(_OutlineColor, col.rgb, col.a);
+                col.a = max(col.a, maxAlpha);
 
                 return col;
             }
