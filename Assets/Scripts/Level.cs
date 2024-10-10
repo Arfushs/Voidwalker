@@ -18,6 +18,8 @@ public class Level : MonoBehaviour
     [Header("Options")]
     [Space]
     [SerializeField] private int _levelIndex;
+
+    public static event Action OnLevelComplete;
     
     [field:SerializeField] public DimensionType InitialDimension { get; private set; }
     
@@ -34,6 +36,13 @@ public class Level : MonoBehaviour
         _player = player;
         _player.SetupPlayer(this);
         _confiner.Init(cinemachineConfiner);
+        _player.transform.position = _playerSpawnPoint.position;
+        ChangeDimension(InitialDimension);
+        HandleBackgrounds();
+    }
+
+    public void ResetLevel()
+    {
         _player.transform.position = _playerSpawnPoint.position;
         ChangeDimension(InitialDimension);
         HandleBackgrounds();

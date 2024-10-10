@@ -6,13 +6,15 @@ using UnityEngine;
 
 public class LevelManager : MonoBehaviour
 {
+    public static LevelManager Instance;
+    
     [Header("Game Objects")]
     [Space]
     [SerializeField] private Player _player;
     [SerializeField] private CinemachineConfiner2D _confiner2D;
     
-    public static LevelManager Instance;
-    private List<Level> _levels = new List<Level>(); 
+    private List<Level> _levels = new List<Level>();
+    private int _currentLevelIndex = 0;
     
     private void Awake()
     {
@@ -22,14 +24,15 @@ public class LevelManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
-
+        
+        _currentLevelIndex = PlayerPrefs.GetInt("last_level", 0);
         _levels.AddRange(GetComponentsInChildren<Level>());
 
     }
 
     private void Start()
     {
-        StartLevel(0);
+        StartLevel(_currentLevelIndex);
     }
 
 
