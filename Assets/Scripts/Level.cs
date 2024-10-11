@@ -83,7 +83,7 @@ public class Level : MonoBehaviour
         
         foreach (IDimensional platform in allPlatforms)
         {
-            if (platform.DimensionType == targetDimension)
+            if (platform.GetDimensionType() == targetDimension)
             {
                 platform.Show();
             }

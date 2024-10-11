@@ -78,6 +78,7 @@ public class PlayerMove : MonoBehaviour
 
     private void FixedUpdate()
     {
+        Debug.Log(_rb.velocity.x);
         HandleMovement();
     }
 

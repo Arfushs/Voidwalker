@@ -48,7 +48,7 @@ Material:
     - _HologramSpeed: 0.3
     - _HologramTiles: 1
     - _MaxAlpha: 1
-    - _Saturation: 4.4
+    - _Saturation: 5.13
     m_Colors:
     - _HologramColor: {r: 0, g: 0.5274171, b: 0.99999994, a: 0}
   m_BuildTextureStacks: []

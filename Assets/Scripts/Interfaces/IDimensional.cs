@@ -3,13 +3,13 @@ using UnityEngine;
 
 namespace Interfaces
 {
-    public interface IDimensional 
+    public interface IDimensional
     {
-        public DimensionType DimensionType { get; }
 
         void Show();
 
         void Hide();
 
+        DimensionType GetDimensionType();
     }
 }
