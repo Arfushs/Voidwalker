@@ -45,9 +45,9 @@ public class PlayerAnimController : MonoBehaviour
         _animator.Play("playerDimensionChange");
     }
 
-    private void FinishDimensionChangeAnimation(string s)
+    private void FinishDimensionChangeAnimation(string stateName)
     {
-        if(s == "playerDimensionChange")
+        if(stateName == "playerDimensionChange")
             isDimensionChangeing = false;
     }
     
