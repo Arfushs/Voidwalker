@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -9,7 +10,12 @@ public class MainMenuManager : MonoBehaviour
 
     public void OpenOptionsMenu() => _mainMenuAnim.OpenOptionsMenu();
     public void CloseOptionsMenu() => _mainMenuAnim.CloseOptionsMenu();
-    
+
+    private void Awake()
+    {
+        Cursor.visible = false;
+    }
+
     public void QuitGame()
     {
 #if UNITY_EDITOR

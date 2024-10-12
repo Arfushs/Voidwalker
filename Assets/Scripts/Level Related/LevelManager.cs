@@ -49,4 +49,6 @@ public class LevelManager : MonoBehaviour
         currentLevel.gameObject.SetActive(true);
         currentLevel.Init(_player, _confiner2D);
     }
+    
+    public Vector3 GetPlayerPosition() => _player.transform.position;
 }

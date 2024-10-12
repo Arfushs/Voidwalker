@@ -253,6 +253,28 @@
                     "action": "DimensionChanger",
                     "isComposite": false,
                     "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "1c477642-b7a8-4e89-9cd1-bbebb1d93f86",
+                    "path": "<DualShockGamepad>/rightShoulder",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "DimensionChanger",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "05f779f8-9448-4249-a033-d119ac2b5f98",
+                    "path": "<XInputController>/rightShoulder",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "DimensionChanger",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
         }
