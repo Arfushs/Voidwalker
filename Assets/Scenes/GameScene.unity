@@ -1031,6 +1031,10 @@ PrefabInstance:
       propertyPath: JumpHeight
       value: 4.2
       objectReference: {fileID: 0}
+    - target: {fileID: 8119425761080543031, guid: e93fc2ac51ec7c247bbae846484157c9, type: 3}
+      propertyPath: _dimensionChangeDuration
+      value: 0.3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

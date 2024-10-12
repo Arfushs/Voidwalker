@@ -24,10 +24,12 @@ public class MainMenuAnim : MonoBehaviour
     private void Awake()
     {
         AnimationFinished.OnAnimationFinished += StartAnim;
+        _mainMenuButtonsCanvasGroup.gameObject.SetActive(false);
     }
 
     private void StartAnim(string s)
     {
+        _mainMenuButtonsCanvasGroup.gameObject.SetActive(true);
         if (s == "main_menu")
         {
             _title.DOFade(1f, _fadeDuration);
