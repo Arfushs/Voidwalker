@@ -165,4 +165,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _uiBackground: {fileID: 0}
   _title: {fileID: 0}
+  _mainMenuButtonsCanvasGroup: {fileID: 0}
   _fadeDuration: 0.5
+  _optionsCanvasGroup: {fileID: 0}
+  _optionsFadeDuration: 0.2
