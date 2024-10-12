@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MainMenuManager : MonoBehaviour
 {
@@ -16,5 +17,10 @@ public class MainMenuManager : MonoBehaviour
 #else
         Application.Quit(); // Build edilen oyunu kapat
 #endif
+    }
+
+    public void StartTheGame()
+    {
+        SceneManager.LoadScene("GameScene");
     }
 }

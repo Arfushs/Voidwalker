@@ -24,8 +24,15 @@ public class LevelManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
-        
-        _currentLevelIndex = PlayerPrefs.GetInt("last_level", 0);
+
+        if (PlayerPrefs.HasKey("last_level"))
+        {
+            _currentLevelIndex = PlayerPrefs.GetInt("last_level");
+        }
+        else
+        {
+            PlayerPrefs.SetInt("last_level", 0);
+        }
         _levels.AddRange(GetComponentsInChildren<Level>());
 
     }
