@@ -49,7 +49,7 @@ public class PlayerDimensionChanger : MonoBehaviour
     {
         Vector3 finalScale = new Vector3(50, 50, 50);
         Sequence sequence = DOTween.Sequence();
-        sequence.Append(_spriteMask.DOScale(finalScale, _dimensionChangeDuration).SetEase(Ease.OutQuad))
+        sequence.Append(_spriteMask.DOScale(finalScale, _dimensionChangeDuration).SetEase(Ease.InQuad))
             .OnComplete(() => CloseSpriteMask());
     }
 
