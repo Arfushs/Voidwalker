@@ -46,11 +46,11 @@ Material:
     m_Ints: []
     m_Floats:
     - _HologramSpeed: 0.1
-    - _HologramTiles: 1
-    - _MaxAlpha: 0.9
+    - _HologramTiles: 2.02
+    - _MaxAlpha: 1
     - _Saturation: 0.76
     m_Colors:
-    - _HologramColor: {r: 2, g: 0, b: 0.57009125, a: 0}
+    - _HologramColor: {r: 2.670157, g: 0.31225348, b: 0, a: 0}
   m_BuildTextureStacks: []
 --- !u!114 &4483517340962206370
 MonoBehaviour:

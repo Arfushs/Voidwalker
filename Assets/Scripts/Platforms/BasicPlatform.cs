@@ -19,6 +19,8 @@ public class BasicPlatform : MonoBehaviour, IDimensional
 
     public void Show()
     {
+        if(DimensionType == DimensionType.Both)
+            return;
         _boxCollider2D.enabled = true;
         _visual.gameObject.SetActive(true);
         _visualHolo.gameObject.SetActive(false);
@@ -26,6 +28,8 @@ public class BasicPlatform : MonoBehaviour, IDimensional
 
     public void Hide()
     {
+        if(DimensionType == DimensionType.Both)
+            return;
         _boxCollider2D.enabled = false;
         _visual.gameObject.SetActive(false);
         _visualHolo.gameObject.SetActive(true);
