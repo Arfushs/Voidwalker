@@ -46,7 +46,7 @@ Material:
     m_Ints: []
     m_Floats:
     - _HologramSpeed: 0.1
-    - _HologramTiles: 1.08
+    - _HologramTiles: 1
     - _MaxAlpha: 0.9
     - _Saturation: 0.76
     m_Colors:
