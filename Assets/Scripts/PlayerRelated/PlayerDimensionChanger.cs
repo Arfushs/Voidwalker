@@ -18,6 +18,11 @@ public class PlayerDimensionChanger : MonoBehaviour
     private void Awake()
     {
         _inputActions = new InputActions();
+        
+    }
+
+    private void OnEnable()
+    {
         _inputActions.Enable();
         _inputActions.Player.DimensionChanger.performed += ChangeDimension;
     }

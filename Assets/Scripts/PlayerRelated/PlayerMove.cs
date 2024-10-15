@@ -41,18 +41,22 @@ public class PlayerMove : MonoBehaviour
     [SerializeField] private GroundChecker _groundChecker;
 
     private InputActions _inputActions;
-
-    private float _localScale;
+    
 
     private void Awake()
     {
         _rb = GetComponent<Rigidbody2D>();
 
         _inputActions = new InputActions();
+        
+        
+    }
+
+    private void OnEnable()
+    {
         _inputActions.Player.Enable();
         _inputActions.Player.Movement.performed += OnMove;
         _inputActions.Player.Movement.canceled += OnMove;
-        _localScale = transform.localScale.x;
     }
 
     private void OnDisable()
@@ -61,6 +65,7 @@ public class PlayerMove : MonoBehaviour
         _inputActions.Player.Movement.performed -= OnMove;
         _inputActions.Player.Movement.canceled -= OnMove;
         _inputActions.Disable();
+        _directionX = 0;
     }
 
     public void OnMove(InputAction.CallbackContext context)
@@ -70,9 +75,14 @@ public class PlayerMove : MonoBehaviour
 
     private void Update()
     {
-        if (_directionX != 0)
+        Vector3 currentScale = transform.localScale; // Mevcut scale'i kaydet
+        if (_directionX != 0) // Hareket varsa
         {
-            transform.localScale = new Vector3(_directionX > 0 ? _localScale : -_localScale, _localScale, _localScale); 
+            // Eğer _directionX pozitifse scale pozitif, negatifse scale negatif olacak şekilde ayarla
+            currentScale.x = Mathf.Abs(currentScale.x) * (_directionX > 0 ? 1 : -1);
+
+            // Scale'i güncelle
+            transform.localScale = currentScale;
         }
     }
 

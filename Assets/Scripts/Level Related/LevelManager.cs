@@ -51,4 +51,5 @@ public class LevelManager : MonoBehaviour
     }
     
     public Vector3 GetPlayerPosition() => _player.transform.position;
+    public Transform GetPlayerTransform() => _player.transform;
 }

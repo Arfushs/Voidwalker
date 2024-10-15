@@ -80,10 +80,22 @@ public class PlayerJump : MonoBehaviour
         _defaultGravityScale = 1f;
 
         _inputActions = new InputActions();
-        _inputActions.Player.Enable();
+        
+        
+    }
 
+    private void OnEnable()
+    {
+        _inputActions.Player.Enable();
         _inputActions.Player.Jump.started += OnJump;
         _inputActions.Player.Jump.canceled += OnJump;
+    }
+
+    private void OnDisable()
+    {
+        _inputActions.Player.Jump.started -= OnJump;
+        _inputActions.Player.Jump.canceled -= OnJump;
+        _inputActions.Player.Disable();
     }
 
     public void OnJump(InputAction.CallbackContext context)

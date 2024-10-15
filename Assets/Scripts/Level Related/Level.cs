@@ -44,6 +44,7 @@ public class Level : MonoBehaviour
     public void ResetLevel()
     {
         _player.transform.position = _playerSpawnPoint.position;
+        _player.SetDimension(InitialDimension);
         ChangeDimension(InitialDimension);
         HandleBackgrounds();
     }
