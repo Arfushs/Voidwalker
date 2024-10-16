@@ -16,6 +16,7 @@ public class PlayerAnimController : MonoBehaviour
 
     private void OnEnable()
     {
+        isDimensionChangeing = false;
         PlayerDimensionChanger.OnDimensionChanged += PlayDimensionChangeAnim;
         AnimationFinished.OnAnimationFinished += FinishDimensionChangeAnimation;
     }
