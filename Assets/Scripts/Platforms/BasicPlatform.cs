@@ -20,6 +20,7 @@ public class BasicPlatform : MonoBehaviour, IDimensional
     [SerializeField] protected float _moveDuration = 0.2f;
     [SerializeField] protected float _bounceAmplitude = 0.05f;  // Aşağı ve yukarı sürekli hareket miktarı
     [SerializeField] protected float _bounceDuration = 0.5f;
+    [SerializeField] private bool _canTween = true;
     
     private Tween _bounceTween;
     
@@ -61,11 +62,13 @@ public class BasicPlatform : MonoBehaviour, IDimensional
         if (other.gameObject.CompareTag("Player"))
         {
             other.transform.SetParent(transform); 
-
-            // İlk başta normal aşağı hareket
-            transform.DOMoveY(_initialPosition.y - _moveDownDistance, _moveDuration)
+            
+            if(_canTween)
+            {
+                transform.DOMoveY(_initialPosition.y - _moveDownDistance, _moveDuration)
                 .SetEase(Ease.OutQuad)
-                .OnComplete(() => StartBounce());  // Aşağı inme tamamlandıktan sonra sürekli bounce başlat
+                .OnComplete(() => StartBounce()); 
+            } 
         }
     }
 
@@ -81,18 +84,21 @@ public class BasicPlatform : MonoBehaviour, IDimensional
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            other.transform.SetParent(null); 
+            other.transform.SetParent(null);
 
-            // Oyuncu platformdan ayrıldığında sürekli bounce hareketini durdur
-            if (_bounceTween != null)
+            if (_canTween)
             {
-                _bounceTween.Kill();
-                _bounceTween = null;
-            }
+                // Oyuncu platformdan ayrıldığında sürekli bounce hareketini durdur
+                if (_bounceTween != null)
+                {
+                    _bounceTween.Kill();
+                    _bounceTween = null;
+                }
 
-            // Platformu eski pozisyonuna geri döndür
-            transform.DOMoveY(_initialPosition.y, _moveDuration)
-                .SetEase(Ease.OutQuad);
+                // Platformu eski pozisyonuna geri döndür
+                transform.DOMoveY(_initialPosition.y, _moveDuration)
+                    .SetEase(Ease.OutQuad);
+            }
         }
     }
     

@@ -547,7 +547,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1726027299718509454, guid: 98c0cfb5f7304f145a3d8e9f6d29550a, type: 3}
       propertyPath: _moveDistance.y
-      value: 8.79
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 2874083303109099463, guid: 98c0cfb5f7304f145a3d8e9f6d29550a, type: 3}
       propertyPath: m_Name
@@ -1036,6 +1036,10 @@ PrefabInstance:
     - target: {fileID: 3728624391845206425, guid: e51851c2e5659474e83a5e2ef430519c, type: 3}
       propertyPath: m_Name
       value: LevelManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 3962875421903316567, guid: e51851c2e5659474e83a5e2ef430519c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6465483378843054903, guid: e51851c2e5659474e83a5e2ef430519c, type: 3}
       propertyPath: m_LocalPosition.y
