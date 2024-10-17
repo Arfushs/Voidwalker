@@ -111,14 +111,15 @@ public class JumperPlatform : MonoBehaviour, IDimensional
     
     private void OnDrawGizmos()
     {
-        // Calculate the maximum height based on jumpForce
-        float maxJumpHeight = _jumpForce.y * 0.1f;  // Adjust scaling if needed
+        // Calculate the jump direction and maximum height based on jumpForce
+        Vector3 jumpDirection = new Vector3(_jumpForce.x, _jumpForce.y, 0) * 0.1f;  // Scale down for visualization
+        Vector3 jumpEndPoint = transform.position + jumpDirection;  // Final position after jump
 
-        // Draw a line showing where the player would reach
+        // Draw a line showing the trajectory the player would take
         Gizmos.color = Color.red;
-        Gizmos.DrawLine(transform.position, transform.position + Vector3.up * maxJumpHeight);
+        Gizmos.DrawLine(transform.position, jumpEndPoint);
 
         // Optionally, draw a sphere at the top to show the maximum height
-        Gizmos.DrawSphere(transform.position + Vector3.up * maxJumpHeight, 0.1f);
+        Gizmos.DrawSphere(jumpEndPoint, 0.1f);
     }
 }
