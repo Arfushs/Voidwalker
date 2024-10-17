@@ -10,26 +10,34 @@ public class JumperPlatform : MonoBehaviour, IDimensional
     [field: Header("Platform Infos")]
     [field: Space]
     [field: SerializeField] public DimensionType DimensionType { get; private set; }
-    [SerializeField] protected Transform _visual;
-    [SerializeField] protected Transform _visualHolo;
+    [SerializeField] private Transform _visual;
+    [SerializeField] private Transform _visualHolo;
+    [SerializeField] private SpriteRenderer _visualSpriteRenderer;
+    [SerializeField] private SpriteRenderer _visualHoloSpriteRenderer;
+    [SerializeField] private AudioSource _holoAudioSource;
+    
     [SerializeField] private Vector2 _jumpForce = new Vector2(0, 50f);  // Adjustable jump force
     [SerializeField] private float _animationScalePercent = 0.5f;  // How much to scale during the animation
 
     private BoxCollider2D _boxCollider2D;
     private Animator _animator;
     private Vector3 _originalScale;  // To store the original scale
+    private AudioSource _jumperAudioSource;
 
     private void Awake()
     {
         _boxCollider2D = GetComponent<BoxCollider2D>();
         _animator = _visual.GetComponent<Animator>();
         _originalScale = _visual.localScale;  // Store the original scale
+        _jumperAudioSource = GetComponent<AudioSource>();
     }
 
     private void OnEnable()
     {
         AnimationFinished.OnAnimationFinished += PlayEmpty;
     }
+
+   
 
     private void OnDisable()
     {
@@ -41,8 +49,9 @@ public class JumperPlatform : MonoBehaviour, IDimensional
         if (DimensionType == DimensionType.Both)
             return;
         _boxCollider2D.enabled = true;
-        _visual.gameObject.SetActive(true);
-        _visualHolo.gameObject.SetActive(false);
+        _visualSpriteRenderer.enabled = true;
+        _visualHoloSpriteRenderer.enabled = false;
+        _holoAudioSource.enabled = false;
     }
 
     public void Hide()
@@ -50,8 +59,9 @@ public class JumperPlatform : MonoBehaviour, IDimensional
         if (DimensionType == DimensionType.Both)
             return;
         _boxCollider2D.enabled = false;
-        _visual.gameObject.SetActive(false);
-        _visualHolo.gameObject.SetActive(true);
+        _visualSpriteRenderer.enabled = false;
+        _visualHoloSpriteRenderer.enabled = true;
+        _holoAudioSource.enabled = true;
     }
 
     public DimensionType GetDimensionType()
@@ -70,6 +80,7 @@ public class JumperPlatform : MonoBehaviour, IDimensional
                 
                 // Scale the platform based on _animationScalePercent
                 ScalePlatform();
+                PlaySpringSound();
                 
                 // Play different animations based on the DimensionType
                 if (DimensionType == DimensionType.Default)
@@ -86,6 +97,11 @@ public class JumperPlatform : MonoBehaviour, IDimensional
                 }
             }
         }
+    }
+
+    private void PlaySpringSound()
+    {
+        _jumperAudioSource.Play();
     }
 
     private void ScalePlatform()
@@ -108,6 +124,7 @@ public class JumperPlatform : MonoBehaviour, IDimensional
             ResetScale();  // Reset the scale after the animation is finished
         }
     }
+    
     
     private void OnDrawGizmos()
     {

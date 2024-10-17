@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8623341683264542021}
   - component: {fileID: 3785710737675664958}
   - component: {fileID: 3573037327891020681}
-  - component: {fileID: 3280999717282286611}
+  - component: {fileID: 529344351879164736}
   m_Layer: 6
   m_Name: FallingPlatform_Default
   m_TagString: Untagged
@@ -108,7 +108,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.9807272, y: 0.2583309}
   m_EdgeRadius: 0
---- !u!114 &3280999717282286611
+--- !u!114 &529344351879164736
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -117,17 +117,20 @@ MonoBehaviour:
   m_GameObject: {fileID: 2874083303109099463}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 67a242f17eb3c0e4aa65e2f762429a35, type: 3}
+  m_Script: {fileID: 11500000, guid: 20c13d2ca193ac44386ce48df9ecd751, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   <DimensionType>k__BackingField: 0
   _visual: {fileID: 1857517964601464781}
   _visualHolo: {fileID: 846076949883530075}
-  _moveDownDistance: 0.1
-  _moveDuration: 0.2
-  _bounceAmplitude: 0.05
-  _bounceDuration: 0.5
-  _canTween: 1
+  _animator: {fileID: 3440916793320671256}
+  _fallDelay: 2.5
+  _returnDelay: 2
+  _fallDistance: 20
+  _fallDuration: 2
+  _returnDuration: 2
+  _shakeStrength: 0.1
+  _shakeRatio: 0.6
 --- !u!1 &3429096505515508669
 GameObject:
   m_ObjectHideFlags: 0

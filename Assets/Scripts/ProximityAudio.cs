@@ -18,7 +18,7 @@ public class ProximityAudio : MonoBehaviour
         {
             // Mesafeye bağlı olarak sesi ayarla
             _audioSource.volume = 1 - (distance / maxDistance);
-            if (!_audioSource.isPlaying)
+            if (!_audioSource.isPlaying && _audioSource.isActiveAndEnabled)
             {
                 _audioSource.Play();
             }

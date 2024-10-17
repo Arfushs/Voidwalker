@@ -11,15 +11,15 @@ public class BasicPlatform : MonoBehaviour, IDimensional
     [field: Header("Platform Infos")]
     [field: Space]
     [field:SerializeField] public DimensionType DimensionType { get; private set;}
-    [SerializeField] protected Transform _visual;
-    [SerializeField] protected Transform _visualHolo;
+    [SerializeField] private Transform _visual;
+    [SerializeField] private Transform _visualHolo;
     
     [Header("Player Bounce Tween")]
     [Space]
-    [SerializeField] protected float _moveDownDistance = 0.1f;  // Ne kadar aşağı hareket edecek
-    [SerializeField] protected float _moveDuration = 0.2f;
-    [SerializeField] protected float _bounceAmplitude = 0.05f;  // Aşağı ve yukarı sürekli hareket miktarı
-    [SerializeField] protected float _bounceDuration = 0.5f;
+    [SerializeField] private float _moveDownDistance = 0.1f;  // Ne kadar aşağı hareket edecek
+    [SerializeField] private float _moveDuration = 0.2f;
+    [SerializeField] private float _bounceAmplitude = 0.05f;  // Aşağı ve yukarı sürekli hareket miktarı
+    [SerializeField] private float _bounceDuration = 0.5f;
     [SerializeField] private bool _canTween = true;
     
     private Tween _bounceTween;
