@@ -108,4 +108,17 @@ public class JumperPlatform : MonoBehaviour, IDimensional
             ResetScale();  // Reset the scale after the animation is finished
         }
     }
+    
+    private void OnDrawGizmos()
+    {
+        // Calculate the maximum height based on jumpForce
+        float maxJumpHeight = _jumpForce.y * 0.1f;  // Adjust scaling if needed
+
+        // Draw a line showing where the player would reach
+        Gizmos.color = Color.red;
+        Gizmos.DrawLine(transform.position, transform.position + Vector3.up * maxJumpHeight);
+
+        // Optionally, draw a sphere at the top to show the maximum height
+        Gizmos.DrawSphere(transform.position + Vector3.up * maxJumpHeight, 0.1f);
+    }
 }

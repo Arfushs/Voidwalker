@@ -29,9 +29,9 @@ public class ProximityAudio : MonoBehaviour
         }
     }
     
-    private void OnDrawGizmos()
-    {
-        Gizmos.color = Color.green; // Daireyi yeşil olarak çiz
-        Gizmos.DrawWireSphere(transform.position, maxDistance); // Sesin yayılma alanını temsil eden daire
-    }
+    // private void OnDrawGizmos()
+    // {
+    //     Gizmos.color = Color.green; // Daireyi yeşil olarak çiz
+    //     Gizmos.DrawWireSphere(transform.position, maxDistance); // Sesin yayılma alanını temsil eden daire
+    // }
 }
