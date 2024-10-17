@@ -73,6 +73,7 @@ public class JumperPlatform : MonoBehaviour, IDimensional
     {
         if (other.gameObject.CompareTag("Player"))
         {
+            
             Rigidbody2D playerRb = other.gameObject.GetComponent<Rigidbody2D>();
             if (playerRb != null)
             {

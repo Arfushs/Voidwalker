@@ -4,6 +4,7 @@ using UnityEngine;
 using Enums;
 using Interfaces;
 using DG.Tweening;
+using UnityEngine.Serialization;
 
 public class FallingPlatform : MonoBehaviour, IDimensional
 {
@@ -12,7 +13,8 @@ public class FallingPlatform : MonoBehaviour, IDimensional
     [field: SerializeField] public DimensionType DimensionType { get; private set; }
     [SerializeField] private Transform _visual;
     [SerializeField] private Transform _visualHolo;
-    [SerializeField] private Animator _animator;
+    [SerializeField] private Animator _animatorVisual;
+    [SerializeField] private Animator _animatorVisualHolo;
     [SerializeField] private float _fallDelay = 1.0f; // Total time before falling
     [SerializeField] private float _returnDelay = 1.0f; // Time before returning to original position
     [SerializeField] private float _fallDistance = 2f; // Distance to fall down
@@ -34,16 +36,7 @@ public class FallingPlatform : MonoBehaviour, IDimensional
         _boxCollider2D = GetComponent<BoxCollider2D>();
         _initialPosition = _visual.position; // Store the initial position of the platform
         _initialPositionHolo = _visualHolo.position; // Store the initial position of the holo platform
-
-        switch (DimensionType)
-        {
-            case DimensionType.Alter:
-                _animator.Play("fallingPlatformAlterIdle");
-                break;
-            case DimensionType.Default :
-                _animator.Play("fallingPlatformIdle");
-                break;
-        }
+        
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -89,6 +82,7 @@ public class FallingPlatform : MonoBehaviour, IDimensional
         _boxCollider2D.enabled = true;
         _visual.gameObject.SetActive(true);
         _visualHolo.gameObject.SetActive(false);
+        HandleAnim();
     }
 
     public void Hide()
@@ -98,6 +92,22 @@ public class FallingPlatform : MonoBehaviour, IDimensional
         _boxCollider2D.enabled = false;
         _visual.gameObject.SetActive(false);
         _visualHolo.gameObject.SetActive(true);
+        HandleAnim();
+    }
+
+    private void HandleAnim()
+    {
+        switch (DimensionType)
+        {
+            case DimensionType.Alter:
+                _animatorVisual.Play("fallingPlatformAlterIdle");
+                _animatorVisualHolo.Play("fallingPlatformAlterIdle");
+                break;
+            case DimensionType.Default :
+                _animatorVisual.Play("fallingPlatformIdle");
+                _animatorVisualHolo.Play("fallingPlatformIdle");
+                break;
+        }
     }
 
     public DimensionType GetDimensionType()

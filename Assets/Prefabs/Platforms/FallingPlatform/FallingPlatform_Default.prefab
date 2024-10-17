@@ -123,7 +123,8 @@ MonoBehaviour:
   <DimensionType>k__BackingField: 0
   _visual: {fileID: 1857517964601464781}
   _visualHolo: {fileID: 846076949883530075}
-  _animator: {fileID: 3440916793320671256}
+  _animatorVisual: {fileID: 3440916793320671256}
+  _animatorVisualHolo: {fileID: 2918148361590603213}
   _fallDelay: 2.5
   _returnDelay: 2
   _fallDistance: 20
