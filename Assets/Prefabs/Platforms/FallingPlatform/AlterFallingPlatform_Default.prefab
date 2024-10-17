@@ -120,7 +120,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 20c13d2ca193ac44386ce48df9ecd751, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <DimensionType>k__BackingField: 0
+  <DimensionType>k__BackingField: 1
   _visual: {fileID: 1857517964601464781}
   _visualHolo: {fileID: 846076949883530075}
   _animator: {fileID: 3440916793320671256}
