@@ -10,8 +10,8 @@ public class MovingPlatform : MonoBehaviour, IDimensional
     [field: Header("Platform Infos")]
     [field: Space]
     [field:SerializeField] public DimensionType DimensionType { get; private set;}
-    [SerializeField] protected Transform _visual;
-    [SerializeField] protected Transform _visualHolo;
+    [SerializeField] private Transform _visual;
+    [SerializeField] private Transform _visualHolo;
     
     [Header("Moving Platform Settings")]
     [SerializeField] private Vector2 _moveDistance;  
@@ -83,7 +83,11 @@ public class MovingPlatform : MonoBehaviour, IDimensional
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            other.transform.SetParent(null); 
+            if (other.gameObject.activeInHierarchy)
+            {
+                other.transform.SetParent(null);
+                
+            }
             
         }
     }

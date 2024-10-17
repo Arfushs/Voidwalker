@@ -84,21 +84,25 @@ public class BasicPlatform : MonoBehaviour, IDimensional
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            other.transform.SetParent(null);
-
-            if (_canTween)
+            if (other.gameObject.activeInHierarchy)
             {
-                // Oyuncu platformdan ayrıldığında sürekli bounce hareketini durdur
-                if (_bounceTween != null)
-                {
-                    _bounceTween.Kill();
-                    _bounceTween = null;
-                }
+                other.transform.SetParent(null);
 
-                // Platformu eski pozisyonuna geri döndür
-                transform.DOMoveY(_initialPosition.y, _moveDuration)
-                    .SetEase(Ease.OutQuad);
+                if (_canTween)
+                {
+                    // Oyuncu platformdan ayrıldığında sürekli bounce hareketini durdur
+                    if (_bounceTween != null)
+                    {
+                        _bounceTween.Kill();
+                        _bounceTween = null;
+                    }
+
+                    // Platformu eski pozisyonuna geri döndür
+                    transform.DOMoveY(_initialPosition.y, _moveDuration)
+                        .SetEase(Ease.OutQuad);
+                }
             }
+            
         }
     }
     
