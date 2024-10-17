@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3573037327891020681}
   - component: {fileID: 4603357665434914849}
   m_Layer: 0
-  m_Name: JumperPlatform_Default
+  m_Name: JumperPlatform_Alter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -124,6 +124,7 @@ MonoBehaviour:
   _visual: {fileID: 1857517964601464781}
   _visualHolo: {fileID: 846076949883530075}
   _jumpForce: {x: 0, y: 50}
+  _animationScalePercent: 0.5
 --- !u!1 &3429096505515508669
 GameObject:
   m_ObjectHideFlags: 0
@@ -199,7 +200,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 8
-  m_Sprite: {fileID: -105616109, guid: ff64af892802f4ba3b3543d333eab68d, type: 3}
+  m_Sprite: {fileID: -1678584143, guid: ff64af892802f4ba3b3543d333eab68d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -297,7 +298,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a9a20448cb2b3104ebb89006919af662, type: 2}
+  - {fileID: 2100000, guid: a9496e8ff4abe9b429d23bed912c0285, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -318,7 +319,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 8
-  m_Sprite: {fileID: -105616109, guid: ff64af892802f4ba3b3543d333eab68d, type: 3}
+  m_Sprite: {fileID: -1678584143, guid: ff64af892802f4ba3b3543d333eab68d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

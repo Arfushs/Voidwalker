@@ -12,15 +12,28 @@ public class JumperPlatform : MonoBehaviour, IDimensional
     [field: SerializeField] public DimensionType DimensionType { get; private set; }
     [SerializeField] protected Transform _visual;
     [SerializeField] protected Transform _visualHolo;
-    [SerializeField] private float jumpForce = 10f;  // Adjustable jump force
+    [SerializeField] private Vector2 _jumpForce = new Vector2(0, 50f);  // Adjustable jump force
+    [SerializeField] private float _animationScalePercent = 0.5f;  // How much to scale during the animation
 
     private BoxCollider2D _boxCollider2D;
     private Animator _animator;
+    private Vector3 _originalScale;  // To store the original scale
 
     private void Awake()
     {
         _boxCollider2D = GetComponent<BoxCollider2D>();
         _animator = _visual.GetComponent<Animator>();
+        _originalScale = _visual.localScale;  // Store the original scale
+    }
+
+    private void OnEnable()
+    {
+        AnimationFinished.OnAnimationFinished += PlayEmpty;
+    }
+
+    private void OnDisable()
+    {
+        AnimationFinished.OnAnimationFinished -= PlayEmpty;
     }
 
     public void Show()
@@ -53,8 +66,10 @@ public class JumperPlatform : MonoBehaviour, IDimensional
             Rigidbody2D playerRb = other.gameObject.GetComponent<Rigidbody2D>();
             if (playerRb != null)
             {
-                // Apply upward force to the player using AddForce
-                playerRb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+                playerRb.velocity = new Vector2(playerRb.velocity.x + _jumpForce.x, _jumpForce.y);
+                
+                // Scale the platform based on _animationScalePercent
+                ScalePlatform();
                 
                 // Play different animations based on the DimensionType
                 if (DimensionType == DimensionType.Default)
@@ -70,6 +85,27 @@ public class JumperPlatform : MonoBehaviour, IDimensional
                     _animator.Play("jumperBothFire");
                 }
             }
+        }
+    }
+
+    private void ScalePlatform()
+    {
+        // Increase the scale of the _visual based on _animationScalePercent
+        _visual.localScale = _originalScale * (1 + _animationScalePercent);
+    }
+
+    private void ResetScale()
+    {
+        // Reset the scale back to the original after the animation finishes
+        _visual.localScale = _originalScale;
+    }
+
+    private void PlayEmpty(string s)
+    {
+        if (s == "jumperJumped")
+        {
+            _animator.Play("Empty");
+            ResetScale();  // Reset the scale after the animation is finished
         }
     }
 }
