@@ -45,7 +45,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _HologramSpeed: 0.944
+    - _HologramSpeed: 0.1
     - _HologramTiles: 2.02
     - _MaxAlpha: 1
     - _Saturation: 0.76

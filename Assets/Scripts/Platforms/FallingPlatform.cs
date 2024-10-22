@@ -100,15 +100,28 @@ public class FallingPlatform : MonoBehaviour, IDimensional
         switch (DimensionType)
         {
             case DimensionType.Alter:
-                _animatorVisual.Play("fallingPlatformAlterIdle");
-                _animatorVisualHolo.Play("fallingPlatformAlterIdle");
+                if (_animatorVisual.enabled)
+                {
+                    _animatorVisual.Play("fallingPlatformAlterIdle");
+                }
+                if (_animatorVisualHolo.enabled)
+                {
+                    _animatorVisualHolo.Play("fallingPlatformAlterIdle");
+                }
                 break;
-            case DimensionType.Default :
-                _animatorVisual.Play("fallingPlatformIdle");
-                _animatorVisualHolo.Play("fallingPlatformIdle");
+            case DimensionType.Default:
+                if (_animatorVisual.enabled)
+                {
+                    _animatorVisual.Play("fallingPlatformIdle");
+                }
+                if (_animatorVisualHolo.enabled)
+                {
+                    _animatorVisualHolo.Play("fallingPlatformIdle");
+                }
                 break;
         }
     }
+
 
     public DimensionType GetDimensionType()
     {
