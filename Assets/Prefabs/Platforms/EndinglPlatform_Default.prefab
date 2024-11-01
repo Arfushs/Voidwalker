@@ -48,9 +48,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67a242f17eb3c0e4aa65e2f762429a35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <DimensionType>k__BackingField: 0
+  <DimensionType>k__BackingField: 2
   _visual: {fileID: 4421428116400227406}
   _visualHolo: {fileID: 5051123168713870245}
+  _moveDownDistance: 0.1
+  _moveDuration: 0.2
+  _bounceAmplitude: 0.05
+  _bounceDuration: 0.5
+  _canTween: 1
 --- !u!50 &4741155109224063597
 Rigidbody2D:
   serializedVersion: 4
@@ -196,7 +201,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 8
-  m_Sprite: {fileID: 1282404369, guid: ff64af892802f4ba3b3543d333eab68d, type: 3}
+  m_Sprite: {fileID: 629298050, guid: ff64af892802f4ba3b3543d333eab68d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
