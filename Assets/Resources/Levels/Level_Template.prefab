@@ -41,35 +41,35 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 679416073111186619, guid: a564fe2bb5fce4d31a7bfcffb804bbb0, type: 3}
       propertyPath: m_Size.x
-      value: 50
+      value: 150
       objectReference: {fileID: 0}
     - target: {fileID: 752982670936044355, guid: a564fe2bb5fce4d31a7bfcffb804bbb0, type: 3}
       propertyPath: m_Size.x
-      value: 50
+      value: 150
       objectReference: {fileID: 0}
     - target: {fileID: 1074922629031757015, guid: a564fe2bb5fce4d31a7bfcffb804bbb0, type: 3}
       propertyPath: m_Size.x
-      value: 50
+      value: 150
       objectReference: {fileID: 0}
     - target: {fileID: 1755436365972742989, guid: a564fe2bb5fce4d31a7bfcffb804bbb0, type: 3}
       propertyPath: m_Size.x
-      value: 50
+      value: 150
       objectReference: {fileID: 0}
     - target: {fileID: 2442567467234889038, guid: a564fe2bb5fce4d31a7bfcffb804bbb0, type: 3}
       propertyPath: m_Name
-      value: Level 0
+      value: Level_Template
       objectReference: {fileID: 0}
     - target: {fileID: 2638790737527589925, guid: a564fe2bb5fce4d31a7bfcffb804bbb0, type: 3}
       propertyPath: m_Size.x
-      value: 50
+      value: 150
       objectReference: {fileID: 0}
     - target: {fileID: 2727736764283675611, guid: a564fe2bb5fce4d31a7bfcffb804bbb0, type: 3}
       propertyPath: m_Size.x
-      value: 50
+      value: 150
       objectReference: {fileID: 0}
     - target: {fileID: 3130129200818949126, guid: a564fe2bb5fce4d31a7bfcffb804bbb0, type: 3}
       propertyPath: m_Size.x
-      value: 50
+      value: 150
       objectReference: {fileID: 0}
     - target: {fileID: 3233323587635213828, guid: a564fe2bb5fce4d31a7bfcffb804bbb0, type: 3}
       propertyPath: defaultPlatformsContainer
@@ -117,15 +117,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4395110441734141006, guid: a564fe2bb5fce4d31a7bfcffb804bbb0, type: 3}
       propertyPath: m_Size.x
-      value: 50
+      value: 150
       objectReference: {fileID: 0}
     - target: {fileID: 5383542418962572755, guid: a564fe2bb5fce4d31a7bfcffb804bbb0, type: 3}
       propertyPath: m_Size.x
-      value: 50
+      value: 150
       objectReference: {fileID: 0}
     - target: {fileID: 5497062521123188201, guid: a564fe2bb5fce4d31a7bfcffb804bbb0, type: 3}
       propertyPath: m_Size.x
-      value: 50
+      value: 150
       objectReference: {fileID: 0}
     - target: {fileID: 5665892235271182382, guid: a564fe2bb5fce4d31a7bfcffb804bbb0, type: 3}
       propertyPath: m_LocalPosition.y
@@ -133,19 +133,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5961928070599772508, guid: a564fe2bb5fce4d31a7bfcffb804bbb0, type: 3}
       propertyPath: m_Size.x
-      value: 50
+      value: 150
       objectReference: {fileID: 0}
     - target: {fileID: 6138721916027177346, guid: a564fe2bb5fce4d31a7bfcffb804bbb0, type: 3}
       propertyPath: m_Size.x
-      value: 50
+      value: 150
       objectReference: {fileID: 0}
     - target: {fileID: 6563866436575928641, guid: a564fe2bb5fce4d31a7bfcffb804bbb0, type: 3}
       propertyPath: m_Size.x
-      value: 50
+      value: 150
       objectReference: {fileID: 0}
     - target: {fileID: 7850706250391637019, guid: a564fe2bb5fce4d31a7bfcffb804bbb0, type: 3}
       propertyPath: m_Size.x
-      value: 121.247246
+      value: 273.05142
       objectReference: {fileID: 0}
     - target: {fileID: 7850706250391637019, guid: a564fe2bb5fce4d31a7bfcffb804bbb0, type: 3}
       propertyPath: m_Size.y
@@ -153,7 +153,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7850706250391637019, guid: a564fe2bb5fce4d31a7bfcffb804bbb0, type: 3}
       propertyPath: m_Offset.x
-      value: 2.4878654
+      value: 5.8512115
       objectReference: {fileID: 0}
     - target: {fileID: 7850706250391637019, guid: a564fe2bb5fce4d31a7bfcffb804bbb0, type: 3}
       propertyPath: m_Offset.y
@@ -161,7 +161,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8249590161700246358, guid: a564fe2bb5fce4d31a7bfcffb804bbb0, type: 3}
       propertyPath: m_Size.x
-      value: 50
+      value: 150
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
