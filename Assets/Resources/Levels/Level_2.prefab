@@ -544,7 +544,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2442567467234889038, guid: a564fe2bb5fce4d31a7bfcffb804bbb0, type: 3}
       propertyPath: m_Name
-      value: Standard_level
+      value: Level_2
       objectReference: {fileID: 0}
     - target: {fileID: 2442567467234889038, guid: a564fe2bb5fce4d31a7bfcffb804bbb0, type: 3}
       propertyPath: m_IsActive
@@ -646,6 +646,10 @@ PrefabInstance:
       propertyPath: m_Size.x
       value: 100
       objectReference: {fileID: 0}
+    - target: {fileID: 6999913674636702927, guid: a564fe2bb5fce4d31a7bfcffb804bbb0, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: db04e39d5be16464a93f0b21d6e8a89b, type: 3}
     - target: {fileID: 7850706250391637019, guid: a564fe2bb5fce4d31a7bfcffb804bbb0, type: 3}
       propertyPath: m_Size.x
       value: 121.247246

@@ -5,14 +5,14 @@ using Cinemachine;
 using Enums;
 using Interfaces;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class Level : MonoBehaviour
 {
     [Header("GameObjects")]
     [Space]
     [SerializeField] private Transform _playerSpawnPoint;
-    [SerializeField] private Transform defaultPlatformsContainer;
-    [SerializeField] private Transform alterPlatformContainer;
+    [SerializeField] private Transform allPlatformContainer;
     [SerializeField] private DimensionalBackground defaultBg, alterBg;
     [SerializeField] private AutoConfiner _confiner;
     [Header("Options")]
@@ -76,8 +76,7 @@ public class Level : MonoBehaviour
     private void ChangeDimension(DimensionType targetDimension)
     {
         List<IDimensional> allPlatforms = new List<IDimensional>();
-        allPlatforms.AddRange(defaultPlatformsContainer.GetComponentsInChildren<IDimensional>());
-        allPlatforms.AddRange(alterPlatformContainer.GetComponentsInChildren<IDimensional>());
+        allPlatforms.AddRange(allPlatformContainer.GetComponentsInChildren<IDimensional>());
         
         if(allPlatforms.Count == 0)
             return;

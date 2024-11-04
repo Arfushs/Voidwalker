@@ -4398,6 +4398,10 @@ PrefabInstance:
       propertyPath: m_Size.x
       value: 150
       objectReference: {fileID: 0}
+    - target: {fileID: 6999913674636702927, guid: a564fe2bb5fce4d31a7bfcffb804bbb0, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 2479408e55e9c344ca4571990d464a01, type: 3}
     - target: {fileID: 7850706250391637019, guid: a564fe2bb5fce4d31a7bfcffb804bbb0, type: 3}
       propertyPath: m_Size.x
       value: 283.59772
