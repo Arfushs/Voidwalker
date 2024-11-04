@@ -31,6 +31,8 @@ public class FallingPlatform : MonoBehaviour, IDimensional
     private Vector3 _initialPositionHolo;
     private BoxCollider2D _boxCollider2D;
 
+    private bool isFalling = false;
+
     private void Awake()
     {
         _boxCollider2D = GetComponent<BoxCollider2D>();
@@ -41,14 +43,16 @@ public class FallingPlatform : MonoBehaviour, IDimensional
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("Player") && !isFalling)
         {
             StartCoroutine(HandleFallingPlatform());
+            
         }
     }
 
     private IEnumerator HandleFallingPlatform()
     {
+        isFalling = true;
         // Calculate shake durations based on _fallDelay and _shakeRatio
         float initialShakeDuration = _fallDelay * _shakeRatio; // Normal shake duration
         float finalShakeDuration = _fallDelay * (1 - _shakeRatio); // Stronger shake duration
@@ -72,6 +76,7 @@ public class FallingPlatform : MonoBehaviour, IDimensional
         transform.DOMoveY(_initialPosition.y, _returnDuration).SetEase(Ease.InOutQuad);
 
         yield return new WaitForSeconds(_returnDuration);
+        isFalling = false;
         
     }
 

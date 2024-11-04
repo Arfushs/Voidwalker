@@ -63,12 +63,15 @@ public class Player : MonoBehaviour
         _rigidbody2D.isKinematic = true;
         _rigidbody2D.velocity = Vector2.zero;
         _animator.Play("playerDeath");
+        
     }
 
-    public void ResetLevel(string s)
+    public async void ResetLevel(string s)
     {
         if (s.Equals("playerDeath"))
         {
+            FadeoutCanvas.Instance.FadeOut();
+            await Task.Delay(250);
             _playerLevel.ResetLevel();
             _playerMove.enabled = true;
             _playerJump.enabled = true;
