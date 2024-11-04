@@ -50,7 +50,7 @@ Material:
     - _MaxAlpha: 1
     - _Saturation: 0.76
     m_Colors:
-    - _HologramColor: {r: 0.3912647, g: 2.7388885, b: 0, a: 1}
+    - _HologramColor: {r: 0.1408081, g: 0, b: 2.7388885, a: 1}
   m_BuildTextureStacks: []
 --- !u!114 &7366409228576660202
 MonoBehaviour:

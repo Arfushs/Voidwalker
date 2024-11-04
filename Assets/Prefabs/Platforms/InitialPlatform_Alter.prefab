@@ -48,9 +48,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67a242f17eb3c0e4aa65e2f762429a35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <DimensionType>k__BackingField: 0
+  <DimensionType>k__BackingField: 1
   _visual: {fileID: 4421428116400227406}
   _visualHolo: {fileID: 5051123168713870245}
+  _moveDownDistance: 0.1
+  _moveDuration: 0.2
+  _bounceAmplitude: 0.05
+  _bounceDuration: 0.5
+  _canTween: 1
 --- !u!61 &5044914166999745921
 BoxCollider2D:
   m_ObjectHideFlags: 0
