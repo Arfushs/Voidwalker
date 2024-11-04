@@ -69,10 +69,23 @@ public class Orbital : MonoBehaviour, IDimensional
             }
         }
     }
-
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.green;
-        Gizmos.DrawWireSphere(transform.position, _radius.x);
+
+        // Elipsi çizecek belirli bir segment sayısı tanımlayın
+        int segments = 100;
+        float angleStep = 2 * Mathf.PI / segments;
+
+        Vector3 prevPoint = transform.position + new Vector3(Mathf.Cos(0) * _radius.x, Mathf.Sin(0) * _radius.y, 0);
+
+        for (int i = 1; i <= segments; i++)
+        {
+            float angle = i * angleStep;
+            Vector3 nextPoint = transform.position + new Vector3(Mathf.Cos(angle) * _radius.x, Mathf.Sin(angle) * _radius.y, 0);
+
+            Gizmos.DrawLine(prevPoint, nextPoint);
+            prevPoint = nextPoint;
+        }
     }
 }
