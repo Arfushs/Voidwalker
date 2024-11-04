@@ -52,4 +52,9 @@ public class SawTrap : MonoBehaviour, IDimensional
     {
         return DimensionType;
     }
+
+    private void OnDestroy()
+    {
+        DOTween.Kill(transform);
+    }
 }

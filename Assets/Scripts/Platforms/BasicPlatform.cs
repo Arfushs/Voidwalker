@@ -106,6 +106,11 @@ public class BasicPlatform : MonoBehaviour, IDimensional
         }
     }
     
+    private void OnDestroy()
+    {
+        DOTween.Kill(transform);
+    }
+    
     
     
 }

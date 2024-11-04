@@ -140,4 +140,5 @@ public class JumperPlatform : MonoBehaviour, IDimensional
         // Optionally, draw a sphere at the top to show the maximum height
         Gizmos.DrawSphere(jumpEndPoint, 0.1f);
     }
+    
 }

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using DG.Tweening;
@@ -22,13 +23,16 @@ public class MovingPlatform : MonoBehaviour, IDimensional
     private BoxCollider2D _boxCollider2D;
     private void Awake()
     {
-        
         _startPosition = transform.position;
         _boxCollider2D = GetComponent<BoxCollider2D>();
         
+    }
+
+    private void OnEnable()
+    {
         StartMovement();
     }
-    
+
     private void FixedUpdate()
     {
         // Tween işlemleri fizik motoruyla uyumlu çalışacak şekilde zamanlanır
@@ -113,5 +117,9 @@ public class MovingPlatform : MonoBehaviour, IDimensional
     public DimensionType GetDimensionType()
     {
         return DimensionType;
+    }
+    private void OnDestroy()
+    {
+        DOTween.Kill(transform);
     }
 }

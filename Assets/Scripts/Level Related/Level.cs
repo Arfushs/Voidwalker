@@ -27,6 +27,11 @@ public class Level : MonoBehaviour
 
     private void Awake()
     {
+        Debug.Log($"{gameObject.name} instantiated");
+    }
+
+    private void OnEnable()
+    {
         PlayerDimensionChanger.OnDimensionChanged += OnDimensionChanged;
         PlayerDimensionChanger.OnMaskTransitionComplete += HandleBackgrounds;
     }
@@ -94,9 +99,14 @@ public class Level : MonoBehaviour
         }
     }
 
-    private void OnDestroy()
+    private void OnDisable()
     {
         PlayerDimensionChanger.OnDimensionChanged -= OnDimensionChanged;
         PlayerDimensionChanger.OnMaskTransitionComplete -= HandleBackgrounds;
+    }
+
+    private void OnDestroy()
+    {
+        Debug.Log($"{gameObject.name} destroyed");
     }
 }

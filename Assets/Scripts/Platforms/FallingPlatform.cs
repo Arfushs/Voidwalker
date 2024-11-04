@@ -132,4 +132,9 @@ public class FallingPlatform : MonoBehaviour, IDimensional
     {
         return DimensionType;
     }
+    
+    private void OnDestroy()
+    {
+        DOTween.Kill(transform);
+    }
 }
