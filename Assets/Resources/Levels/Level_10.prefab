@@ -2673,11 +2673,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2442567467234889038, guid: a564fe2bb5fce4d31a7bfcffb804bbb0, type: 3}
       propertyPath: m_Name
-      value: Hardes_Level
+      value: Level_10
       objectReference: {fileID: 0}
     - target: {fileID: 2442567467234889038, guid: a564fe2bb5fce4d31a7bfcffb804bbb0, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2638790737527589925, guid: a564fe2bb5fce4d31a7bfcffb804bbb0, type: 3}
       propertyPath: m_Size.x
@@ -2775,6 +2775,10 @@ PrefabInstance:
       propertyPath: m_Size.x
       value: 50
       objectReference: {fileID: 0}
+    - target: {fileID: 6999913674636702927, guid: a564fe2bb5fce4d31a7bfcffb804bbb0, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: db04e39d5be16464a93f0b21d6e8a89b, type: 3}
     - target: {fileID: 7850706250391637019, guid: a564fe2bb5fce4d31a7bfcffb804bbb0, type: 3}
       propertyPath: m_Size.x
       value: 121.247246
