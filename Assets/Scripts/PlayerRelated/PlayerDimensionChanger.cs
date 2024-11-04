@@ -10,7 +10,11 @@ public class PlayerDimensionChanger : MonoBehaviour
 {
     [SerializeField] private Transform _spriteMask;
     [SerializeField] private float _dimensionChangeDuration = .5f;
+    [SerializeField] private AudioClip _clip1;
+    [SerializeField] private AudioClip _clip2;
     
+    private AudioSource _audioSource;
+    private int _audioIndex =0;
     private InputActions _inputActions;
     private bool _canChangeDimension = true;
     public static event Action OnDimensionChanged;
@@ -18,6 +22,7 @@ public class PlayerDimensionChanger : MonoBehaviour
     private void Awake()
     {
         _inputActions = new InputActions();
+        _audioSource = GetComponent<AudioSource>();
         
     }
 
@@ -38,6 +43,18 @@ public class PlayerDimensionChanger : MonoBehaviour
         if (_canChangeDimension)
         {
             Debug.Log("Change dimension");
+
+            if (_audioIndex == 0)
+            {
+                _audioSource.PlayOneShot(_clip1);
+                _audioIndex = 1;
+            }
+            else if (_audioIndex == 1)
+            {
+                _audioSource.PlayOneShot(_clip2);
+                _audioIndex = 0;
+            }
+            
             _canChangeDimension = false;
             OnDimensionChanged?.Invoke();
             OpenSpriteMask();
