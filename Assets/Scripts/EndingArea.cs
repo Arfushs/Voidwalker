@@ -1,7 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.Threading.Tasks;
+
 using UnityEngine;
 
 public class EndingArea : MonoBehaviour
@@ -14,10 +14,15 @@ public class EndingArea : MonoBehaviour
         }
     }
 
-    private async void ChangeNextLevel()
+    private void ChangeNextLevel()
+    {
+        StartCoroutine("ChangeNextLevelCoroutine");
+    }
+
+    private IEnumerator ChangeNextLevelCoroutine()
     {
         FadeoutCanvas.Instance.FadeOut();
-        await Task.Delay(250);
+        yield return new WaitForSeconds(0.25f);
         LevelManager.Instance.LoadNextLevel();
     }
 }

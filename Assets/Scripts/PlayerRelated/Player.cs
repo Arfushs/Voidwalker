@@ -1,7 +1,6 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.Threading.Tasks;
 using Enums;
 using UnityEngine;
 
@@ -66,19 +65,24 @@ public class Player : MonoBehaviour
         
     }
 
-    public async void ResetLevel(string s)
+    public void ResetLevel(string s)
     {
         if (s.Equals("playerDeath"))
         {
-            FadeoutCanvas.Instance.FadeOut();
-            await Task.Delay(250);
-            _playerLevel.ResetLevel();
-            _playerMove.enabled = true;
-            _playerJump.enabled = true;
-            _dimensionChanger.enabled = true;
-            _playerAnimController.enabled = true;
-            _rigidbody2D.isKinematic = false;
+            StartCoroutine(ResetLevelCoroutine());
         }
+    }
+
+    private IEnumerator ResetLevelCoroutine()
+    {
+        FadeoutCanvas.Instance.FadeOut();
+        yield return new WaitForSeconds(.25f);
+        _playerLevel.ResetLevel();
+        _playerMove.enabled = true;
+        _playerJump.enabled = true;
+        _dimensionChanger.enabled = true;
+        _playerAnimController.enabled = true;
+        _rigidbody2D.isKinematic = false;
     }
     
     
