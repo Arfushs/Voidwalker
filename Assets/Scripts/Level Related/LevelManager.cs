@@ -25,6 +25,7 @@ public class LevelManager : MonoBehaviour
             Destroy(gameObject);
             return;
         }
+        Cursor.visible = false;
 
         // Last level index yükleme veya varsayılan olarak 0 atama
         _currentLevelIndex = PlayerPrefs.HasKey("last_level") ? PlayerPrefs.GetInt("last_level") : 0;

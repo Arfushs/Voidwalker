@@ -17,7 +17,7 @@ public class MainMenuManager : MonoBehaviour
 
     private void Awake()
     {
-        //Cursor.visible = false;
+        Cursor.visible = false;
     }
 
     public void QuitGame()
