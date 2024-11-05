@@ -2011,6 +2011,10 @@ PrefabInstance:
       propertyPath: m_Size.x
       value: 150
       objectReference: {fileID: 0}
+    - target: {fileID: 1271346143495006140, guid: a564fe2bb5fce4d31a7bfcffb804bbb0, type: 3}
+      propertyPath: m_text
+      value: Level - 4
+      objectReference: {fileID: 0}
     - target: {fileID: 1755436365972742989, guid: a564fe2bb5fce4d31a7bfcffb804bbb0, type: 3}
       propertyPath: m_Size.x
       value: 150
@@ -2620,7 +2624,7 @@ PrefabInstance:
     m_RemovedGameObjects: []
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 8623341683264542021, guid: ec6cb998693812c43858094d6b4ba634, type: 3}
-      insertIndex: 1
+      insertIndex: -1
       addedObject: {fileID: 6924922413916131033}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ec6cb998693812c43858094d6b4ba634, type: 3}

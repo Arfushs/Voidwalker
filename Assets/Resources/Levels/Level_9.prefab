@@ -1906,13 +1906,17 @@ PrefabInstance:
       propertyPath: m_Size.x
       value: 150
       objectReference: {fileID: 0}
+    - target: {fileID: 1271346143495006140, guid: a564fe2bb5fce4d31a7bfcffb804bbb0, type: 3}
+      propertyPath: m_text
+      value: Level - 9
+      objectReference: {fileID: 0}
     - target: {fileID: 1755436365972742989, guid: a564fe2bb5fce4d31a7bfcffb804bbb0, type: 3}
       propertyPath: m_Size.x
       value: 150
       objectReference: {fileID: 0}
     - target: {fileID: 2442567467234889038, guid: a564fe2bb5fce4d31a7bfcffb804bbb0, type: 3}
       propertyPath: m_Name
-      value: Level_50
+      value: Level_9
       objectReference: {fileID: 0}
     - target: {fileID: 2442567467234889038, guid: a564fe2bb5fce4d31a7bfcffb804bbb0, type: 3}
       propertyPath: m_IsActive
@@ -2906,7 +2910,7 @@ MonoBehaviour:
   - {x: 0.41056857, y: -0.20967767, z: 0}
   m_ShapePathHash: 1127929471
   m_Mesh: {fileID: 0}
-  m_InstanceId: 150158
+  m_InstanceId: 121678
   m_LocalBounds:
     m_Center: {x: -0.0000038146973, y: 0.000000014901161, z: 0}
     m_Extent: {x: 1.0483894, y: 0.20967768, z: 0}
