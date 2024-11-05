@@ -44,6 +44,7 @@ public class LevelManager : MonoBehaviour
         if (levelIndex >= totalLevels)
         {
             levelIndex = 0;
+            PlayerPrefs.SetInt("all_levels_finished",1);
         }
 
         // Mevcut leveli kapat ve yok et

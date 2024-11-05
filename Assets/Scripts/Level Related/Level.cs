@@ -18,8 +18,6 @@ public class Level : MonoBehaviour
     [Header("Options")]
     [Space]
     [SerializeField] private int _levelIndex;
-
-    public static event Action OnLevelComplete;
     
     [field:SerializeField] public DimensionType InitialDimension { get; private set; }
     

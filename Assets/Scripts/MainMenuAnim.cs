@@ -20,11 +20,58 @@ public class MainMenuAnim : MonoBehaviour
     [SerializeField] private CanvasGroup _optionsCanvasGroup;
     [SerializeField] private float _optionsFadeDuration = 0.5f;
     
+    private Animator _animator;  // Animator bileşenini referanslayın
+    
 
     private void Awake()
     {
         AnimationFinished.OnAnimationFinished += StartAnim;
+        _animator = GetComponent<Animator>();
         _mainMenuButtonsCanvasGroup.gameObject.SetActive(false);
+    }
+    
+    
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Space) && _animator.GetCurrentAnimatorStateInfo(0).normalizedTime < 1)
+        {
+            SkipAnimation();
+        }
+    }
+
+    private void SkipAnimation()
+    {
+        // Tüm aktif DOTween animasyonlarını sonlandır
+        DOTween.KillAll();
+
+        // Animasyonun son hallerine geçiş yap
+        _title.color = new Color(_title.color.r, _title.color.g, _title.color.b, 1f);
+        _uiBackground.color = new Color(_uiBackground.color.r, _uiBackground.color.g, _uiBackground.color.b, .89f);
+        _mainMenuButtonsCanvasGroup.alpha = 1f;
+        _mainMenuButtonsCanvasGroup.interactable = true;
+
+        if (_optionsCanvasGroup.alpha > 0f)
+        {
+            _optionsCanvasGroup.alpha = 1f;
+            _optionsCanvasGroup.interactable = true;
+            _optionsCanvasGroup.blocksRaycasts = true;
+        }
+        else
+        {
+            _mainMenuButtonsCanvasGroup.alpha = 1f;
+            _mainMenuButtonsCanvasGroup.interactable = true;
+            _optionsCanvasGroup.alpha = 0f;
+            _optionsCanvasGroup.interactable = false;
+            _optionsCanvasGroup.blocksRaycasts = false;
+        }
+
+        // Animator animasyonunu son pozisyona ayarla
+        if (_animator != null && _animator.GetCurrentAnimatorStateInfo(0).normalizedTime < 1)
+        {
+            _animator.Play(_animator.GetCurrentAnimatorStateInfo(0).fullPathHash, -1, 1f);
+            _animator.Update(0f); // Anında geçiş yapar
+        }
     }
 
     private void StartAnim(string s)
