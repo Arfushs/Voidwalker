@@ -20,6 +20,11 @@ public class MainMenuAnim : MonoBehaviour
     [SerializeField] private CanvasGroup _optionsCanvasGroup;
     [SerializeField] private float _optionsFadeDuration = 0.5f;
     
+    [Header("Level Selector Menu")]
+    [Space]
+    [SerializeField] private CanvasGroup _levelsCanvasGroup;
+    [SerializeField] private float _levelsFadeDuration = 0.5f;
+    
     private Animator _animator;  // Animator bileşenini referanslayın
     
 
@@ -104,8 +109,30 @@ public class MainMenuAnim : MonoBehaviour
             .Append(_optionsCanvasGroup.DOFade(0f, _optionsFadeDuration))
             .AppendInterval(.2f)
             .Append(_mainMenuButtonsCanvasGroup.DOFade(1f, _optionsFadeDuration))
-            .OnComplete(()=>_mainMenuButtonsCanvasGroup.interactable = true);;
+            .OnComplete(()=>_mainMenuButtonsCanvasGroup.interactable = true);
 
+    }
+
+    public void OpenLevelSelectorMenu()
+    {
+        _mainMenuButtonsCanvasGroup.interactable = false;
+        _levelsCanvasGroup.blocksRaycasts = true;
+        DOTween.Sequence()
+            .Append(_mainMenuButtonsCanvasGroup.DOFade(0f, _optionsFadeDuration))
+            .AppendInterval(.2f)
+            .Append(_levelsCanvasGroup.DOFade(1f, _levelsFadeDuration))
+            .OnComplete(()=>_levelsCanvasGroup.interactable = true);
+    }
+
+    public void CloseLevelSelectorMenu()
+    {
+        _levelsCanvasGroup.interactable = false;
+        _levelsCanvasGroup.blocksRaycasts = false;
+        DOTween.Sequence()
+            .Append(_levelsCanvasGroup.DOFade(0f, _levelsFadeDuration))
+            .AppendInterval(.2f)
+            .Append(_mainMenuButtonsCanvasGroup.DOFade(1f, _levelsFadeDuration))
+            .OnComplete(()=>_mainMenuButtonsCanvasGroup.interactable = true);
     }
 
 

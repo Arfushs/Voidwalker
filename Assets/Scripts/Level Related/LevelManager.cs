@@ -69,6 +69,9 @@ public class LevelManager : MonoBehaviour
         // Geçerli level indeksini güncelle
         _currentLevelIndex = levelIndex;
         PlayerPrefs.SetInt("last_level", _currentLevelIndex);
+        
+        if(_currentLevelIndex > PlayerPrefs.GetInt("max_level"))
+            PlayerPrefs.SetInt("max_level", _currentLevelIndex);
 
         // Level init işlemleri
         Level currentLevelComponent = _currentLevel.GetComponent<Level>();

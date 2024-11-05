@@ -11,9 +11,13 @@ public class MainMenuManager : MonoBehaviour
     public void OpenOptionsMenu() => _mainMenuAnim.OpenOptionsMenu();
     public void CloseOptionsMenu() => _mainMenuAnim.CloseOptionsMenu();
 
+    public void OpenLevelSelectionMenu() => _mainMenuAnim.OpenLevelSelectorMenu();
+    
+    public void CloseLevelSelectionMenu() => _mainMenuAnim.CloseLevelSelectorMenu();
+
     private void Awake()
     {
-        Cursor.visible = false;
+        //Cursor.visible = false;
     }
 
     public void QuitGame()
@@ -27,6 +31,12 @@ public class MainMenuManager : MonoBehaviour
 
     public void StartTheGame()
     {
+        SceneManager.LoadScene("GameScene");
+    }
+
+    public void StartGameWithIndex(int index)
+    {
+        PlayerPrefs.SetInt("last_level", index);
         SceneManager.LoadScene("GameScene");
     }
 }
